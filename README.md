@@ -1,2 +1,3 @@
-# ArtofStatistics
-Code for 'The Art of Statistics'
+## ArtofStatistics
+#Code for 'The Art of Statistics'
+by David Spiegelhalter
