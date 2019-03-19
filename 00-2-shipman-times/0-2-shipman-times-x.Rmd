@@ -9,7 +9,7 @@ Data are contained in [0-2-shipman-times-x.csv](0-2-shipman-times-x.csv), and ta
 ```{r}
 
 library(ggplot2)
-shipmantimes<-read.csv("0-2-shipman-times.csv", header=TRUE) # reads data into shipmantimes data frame
+shipmantimes<-read.csv("0-2-shipman-times-x.csv", header=TRUE) # reads data into shipmantimes data frame
 p <- ggplot(shipmantimes, aes(x=Hour, y)) + ylim(0,15) # constructs initial plot object, p
 p <- p + geom_line(aes(y = Comparison, col = "Comparison GPs"), size=1.5) # adds a y-series
 p <- p + geom_line(aes(y = Shipman, col = "Shipman"), size=1.5) # adds a y-series
