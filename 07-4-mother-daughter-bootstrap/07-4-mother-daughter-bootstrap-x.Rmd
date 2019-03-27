@@ -1,0 +1,87 @@
+---
+  title: "Art of Statistics: Figure 7.4 (page 202) Mother-Daughter regression bootstrap"
+  #output: md_document
+  output: html_document
+---
+
+Data as in Galton
+
+```{r data Preparation}
+
+library("ggplot2")
+library("reshape2")
+
+# set seed for reproducibility
+set.seed(12321)
+GaltonData <- read.csv("07-4-galton-x.csv") # 
+GaltonMoDa <- GaltonData[GaltonData$Gender=="F",]
+NumMoDa <- nrow(GaltonMoDa)
+
+### CREATE BOOTSTRAP RESAMPLES
+
+NumBoot <- 1000 # for interval
+
+# Do bootstrap resampling
+BootSamples <- lapply(1:NumBoot, function(n){
+  SampledIndices <- sample(1:NumMoDa, NumMoDa, replace=TRUE)
+  GaltonMoDa[SampledIndices,]
+})
+
+# Make a linear model for each resample
+BootLMs <- lapply(BootSamples, function(X){lm(Height~Mother, data=X)})
+
+PredNPoints <- 10
+Predictable <- data.frame(Family=rep(-1, PredNPoints),
+                          Father=rep(-1, PredNPoints), 
+                          Mother=seq(min(GaltonData$Mother), max(GaltonData$Mother), length.out=PredNPoints), 
+                          Gender=rep("F", PredNPoints),
+                          Height=rep(-1, PredNPoints),
+                          Kids=rep(-1,PredNPoints)
+                          )
+
+BootPredictions <- lapply(BootLMs, function(an_lm){
+  data.frame(Mother=Predictable$Mother, Height=predict(an_lm, Predictable))
+})
+
+BootPredictionsDF <- melt(BootPredictions, id="Mother", value.name="Height")
+BootPredictionsDF$L1 <- as.factor(BootPredictionsDF$L1)
+```
+
+Bootstrap confidence interval for gradient - see Table 9.1 on page 243
+```{r}
+# 95% interval on gradient?  need to extract graidents from fitted lines in plot
+grads=rep(0,NumBoot)
+for(i in 1:NumBoot){
+  grads[i]=BootLMs[[i]]$coefficients[2]
+  }
+low025 =grads[order(grads)][25]
+high975=grads[order(grads)][975]
+mean(grads)
+sd(grads)
+
+
+```
+
+###Figure 7-4 code
+
+```{r figure 7-4 code}
+
+
+p <- ggplot(GaltonMoDa, aes(x=Mother, y=Height)) # assign dataframe GaltonMoDa into plot object p
+
+p <- p + geom_line(aes(color=L1), data=BootPredictionsDF, size=0.2) #assign dataframe BootPredictionsDF into line object and assign to plot
+
+# alternative non-colour representation
+#p <- p + scale_colour_grey(start = 0.25, end = .3)
+
+p <- p + geom_point(shape=1, size=1, position=position_jitter(w=0.2,h=0.2)) # assign scatter chart-type to main plot data (GaltonMoDa)
+
+p <- p + geom_smooth(method=lm, se=FALSE, size=1.5, color="black") # adds linear regression line
+p <- p + scale_x_continuous(breaks = seq(58, 70, 2))
+p <- p + scale_y_continuous(breaks = seq(56, 70, 2))
+p <- p + theme(legend.position = "none") # removes legend
+p <- p + ylab("Daughter's height") + xlab("Mother's height") # adds axis labels
+p #displays plot
+```
+
+Figure 7.4 Fitted regression lines for twenty bootstrap resamples of Galton's mother-daughter height data superimposed on original data, showing the small variability in gradient due to the large sample size.

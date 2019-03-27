@@ -1,0 +1,30 @@
+---
+  title: "Art of Statistics: Figure 2.4 (page 55): Numbers of sexual partners"
+  #output: md_document
+  output: html_document
+---
+Data are contained in [02-4-sexual-partners-counts-x.csv](02-4-sexual-partners-counts-x.csv), and comprise the distribnuton of the reported lifetime number of opposite-sex partners for men and women aged 35-44. The data are derived from the Natsal-3 survey reported  in [C.H. Mercer et al., ‘Changes in Sexual Attitudes and Lifestyles in Britain through the Life Course and Over Time: Findings from the National Surveys of Sexual Attitudes and Lifestyles (Natsal)’, 2013](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(13)62035-8/fulltext), and are kindly provided by Natsal.  For a vivid examination of sex statistics, see [Sex by Numbers, 2015](https://www.amazon.co.uk/Numbers-Wellcome-Collection-David-Spiegelhalter/dp/1781253293) .
+
+Table 2.2 (page 53) of summary statistics were taken from Tables 2 and 3 of Mercer et al (2013): the reported sample sizes of 806 men and 1215 women correspond to the total number surveyed.  
+
+### Figure 2.4 (page 55) Bar chart
+The counts correspond to 796 men and 1193 women (not 1000 as stated on page 191) for whom detailed data were available. 
+
+```{r}
+library(ggplot2)
+partners <-read.csv("02-4-sexual-partners-counts-x.csv", header=TRUE) # reads data into data frame
+
+
+p <- ggplot(partners, aes(x=NumPartners)) # constructs initial plot object, p
+p <- p + geom_bar(aes(y=Percent,fill=Gender),stat = "identity",position="dodge") # assigns bar-chart type with side by side (dodged) bars
+p <- p + geom_text(aes(x = 30, y = 12, label = "Women 35-44", color = "Female", hjust=0)) # our custom legend
+p <- p + geom_text(aes(x = 30, y = 11, label = "Men 35-44", color = "Male", hjust=0)) # our custom legend
+p <- p + scale_x_continuous(breaks = c(0,5,10,15,20,25,30,35,40,45,50), limits=c(0,50)) # desired x-axis value labels
+p <- p + scale_y_continuous(breaks = c(0,2,4,6,8,10,12,14,16,18)) # desired y-axis value labels
+p <- p + theme(legend.position="none") # removes the default legend
+p <- p +  labs(x="Reported number of lifetime opposite-sex partners", y="Percentage") # Adds axis labels  
+p # draw the plot
+
+```
+
+Figure 2.4 Data provided by Natsal-3 based on interviews between 2010 and 2012. The series have been truncated at 50 for reasons of space - the totals go up to 500 for both men and women. Note the clear use of round numbers for ten or more partners, and the tendency for men to report more partners than women.

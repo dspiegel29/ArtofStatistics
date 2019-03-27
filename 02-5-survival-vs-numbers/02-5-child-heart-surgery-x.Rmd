@@ -1,0 +1,66 @@
+---
+  title: "Art of Statistics: Figure 2.5 (page 57) Child heart surgery survival and volume"
+  #output: md_document
+  output: html_document
+---
+
+Data from 1991-1995 are contained in [02-5-child-heart-surgery-1991-x.csv](02-5-child-heart-surgery-1991-x.csv), and taken from [D.J. Spiegelhalter et al., Commissioned Analysis of Surgical Performance Using Routine Data: Lessons from the Bristol Inquiry](https://onlinelibrary.wiley.com/doi/10.1111/1467-985X.02021/pdf).
+
+
+Data from 2012-2014 were shown in Table 1.1 (page 23) and are contained in [02-5-child-heart-surgery-2012-x.csv](02-5-child-heart-surgery-2012-x.csv). The data were originally presented in the [NCHDA 2012-15 report](https://nicor4.nicor.org.uk/chd/an_paeds.nsf/vwContent/Analysis%20Documents?Opendocument), but are best seen on  [childrensheartsurgery.info](http://childrensheartsurgery.info/).
+
+### Figure 2.5 (page 57) Scatterplots
+
+```{r}
+
+library(ggplot2)
+# (a) Survival in under-1s, 1991-1995
+child.1991 <- read.csv("02-5-child-heart-surgery-1991-x.csv") # read data into dataframe 
+
+p <- ggplot(child.1991, aes(x=Operations, y=100*Survivors/Operations, col=Hospital)) #defines plot axis data fields and colour legend data field
+p <- p + geom_point(aes(size=1.5)) # defines scatter-type plot
+p <- p + expand_limits(x = c(0,700),y=c(70,100))
+p <- p  + scale_size_continuous(name = "Size", guide = FALSE)  # turns off otherwise added size legend
+p <- p +  labs(x="Number of operations", y = "% 30-day survival", title="(a) Survival in under-1s, 1991-1995") # Adds title, subtitle, and caption
+p <- p + theme(plot.caption=element_text(hjust = 0.5)) # centre justifies the caption
+p
+#(b) Survival for all children, 2012-2015
+child.2012 <- read.csv("02-5-child-heart-surgery-2012-x.csv") # read data into dataframe all
+q <- ggplot(child.2012, aes(x=Operations, y=100*Survivors/Operations,col=Hospital)) #defines plot axis data fields and colour legend data field
+q <- q + geom_point(aes(size=1.5)) # defines scatter-type plot
+q <- q + expand_limits(x = c(0,2000),y=c(95,100))
+q <- q  + scale_size_continuous(name = "Size", guide = FALSE)  # turns off otherwise added size legend
+q <- q +  labs(x="Number of operations", y = "% 30-day survival", title="(b) Survival for all children, 2012-2015") # Adds title, subtitle 
+q
+
+```
+
+Figure 2.5
+Scatter-plots of survival rates against number of operations in child heart surgery. For (a) 1991-1995, the Pearson correlation is 0.59 and the rank correlation is 0.85, for (b) 2012-2015, the Pearson correlation is 0.17 and the rank correlation is -0:03.
+
+
+### Correlations in (a) 1991-1995 data
+```{r}
+attach(child.1991)
+cor.test(Operations, 100*Survivors/Operations,method="pearson")
+cor.test(Operations, 100*Survivors/Operations,method="spearman")
+```
+
+### Correlations in (a) 1991-1995 data, without Bristol
+```{r}
+cor.test(Operations[-1], 100*Survivors[-1]/Operations[-1],method="pearson")
+cor.test(Operations[-1], 100*Survivors[-1]/Operations[-1],method="spearman")
+```
+
+### Correlations in (b) 2012-2014 data
+
+```{r}
+attach(child.2012)
+cor.test(Operations, 100*Survivors/Operations,method="pearson")
+cor.test(Operations, 100*Survivors/Operations,method="spearman")
+```
+### Correlations in (b) 2012-2014 data, without smallest hospital
+```{r}
+cor.test(Operations[-1], 100*Survivors[-1]/Operations[-1],method="pearson")
+cor.test(Operations[-1], 100*Survivors[-1]/Operations[-1],method="spearman")
+```

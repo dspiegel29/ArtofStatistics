@@ -1,0 +1,17 @@
+ dailyNumberOfRecordedHomicideIncidents,FiguresType,Occurences
+0,ExpectedFigures,264
+1,ExpectedFigures,376
+2,ExpectedFigures,267
+3,ExpectedFigures,127
+4,ExpectedFigures,45
+5,ExpectedFigures,13
+6,ExpectedFigures,3
+7 or more,ExpectedFigures,1
+0,ObservedFigures,259
+1,ObservedFigures,387
+2,ObservedFigures,261
+3,ObservedFigures,131
+4,ObservedFigures,40
+5,ObservedFigures,13
+6,ObservedFigures,3
+7 or more,ObservedFigures,0

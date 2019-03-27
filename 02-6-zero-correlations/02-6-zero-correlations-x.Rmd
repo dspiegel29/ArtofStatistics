@@ -1,0 +1,29 @@
+---
+  title: "Art of Statistics: Figure 2.6 (page 59)  Pearson Correlation Coefficients of zero"
+  #output: md_document
+  output: html_document
+---
+Data are from  Alberto Cairo's wonderful [Datasaurus dozen](http://www.thefunctionalart.com/2016/08/download-datasaurus-never-trust-summary.html).
+```{r}
+library(magrittr)
+library(ggplot2)
+library(ggpubr)
+library(datasauRus)
+
+slant <- ggplot(datasaurus_dozen_wide, aes(x=slant_down_x,y=slant_down_y),   colour=dataset) # loads slant-pattern dataset of datasauRus package into data frame slant
+slant <- slant + geom_point() # as a scatter type geom
+slant <- slant + theme_void() # eliminates unwanted axis labels
+slant <- slant + theme(legend.position = "none", panel.border = element_rect(colour = "black", fill=NA, size = 1), plot.margin = margin(0,2,0,2), aspect.ratio = 1) # removes legend, adds a border, adds margin space below, and specifies required aspect ratio
+
+dino <- ggplot(datasaurus_dozen_wide, aes(x=dino_x,y=dino_y), colour=dataset) +
+  geom_point() # loads dino-figure dataset of datasauRus package into data frame dino as a scatter type geom
+dino <- dino +theme_void() # eliminates unwanted axis labels
+dino <- dino + theme(legend.position = "none", panel.border =  element_rect(colour = "black", fill=NA, size = 1), plot.margin = margin(0,2,0,2), aspect.ratio = 1) # removes legend, adds a border, adds margin space below, specifies required aspect ratio
+
+p <- ggarrange(slant, dino, ncol=2, nrow=1) # vertically frames the two plots
+
+p
+
+```
+
+Figure 2.6 Two sets of (fictitious) data-points for which the Pearson correlation coefficients are both 0. This clearly does not mean there is no relationship between the two variables being plotted.

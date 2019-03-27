@@ -1,0 +1,102 @@
+---
+  title: "Art of Statistics: Table 5.1 (page 123) and Figure 5.1 (page 124) Galton family heght data"
+  #output: md_document
+  output: html_document
+---
+
+Although Data from 1991-1995 are contained in [05-1-galton-x.csv](05-1-galton-x.csv),
+Although the book says the data is from [HistData: Data Sets from the History of Statistics and Data Visualization, 2018](https://cran.r-project.org/web/packages/HistData/index.html), I have actually used this version of  [Galton's Height Data](http://www.randomservices.org/random/data/Galton.html)
+
+```{r}
+
+
+galton<-read.csv("05-1-galton-x.csv",header=TRUE) # read csv file into dataframe galton
+attach(galton) #uncomment if/while necessary
+
+summary(galton)
+
+# summary statistics
+# need means for unique fathers and mothers - identify first mention of each family
+Unique.Fathers=numeric()
+Unique.Mothers=numeric()
+nunique=1 # number of unique families 
+Unique.Fathers[1] = Father[1]
+Unique.Mothers[1] = Mother[1]  
+ for(i in 2:length(Family))
+{   
+    if(Family[i] != Family[i-1]){
+      nunique=nunique+1
+    Unique.Fathers[nunique]=Father[i]
+    Unique.Mothers[nunique]=Mother[i]
+    }
+  }
+  
+length(Unique.Fathers)
+summary(Unique.Fathers)
+sd(Unique.Fathers)
+
+length(Unique.Mothers)
+summary(Unique.Mothers)
+sd(Unique.Mothers)
+ 
+Son = Height[Gender=="M"] 
+length(Son)
+summary(Son)
+sd(Son)
+
+Daughter = Height[Gender=="F"]
+length(Daughter)
+summary(Daughter)
+sd(Daughter)
+```
+
+
+### Figure 5.1 (page 124) Linear regression of sons' on fathers' heights
+
+```{r}
+
+library(ggplot2)
+# Heights of fathers of sons
+FatherS = Father[Gender=="M"]
+
+fit <- lm(Son ~ FatherS) # linear regression data in fit
+Predicted <- predict(fit)   # Get the predicted values
+
+
+FatherS.j <- jitter(FatherS, factor=5) 
+Son.j <- jitter(Son, factor=5)
+
+# create new data frame with exact and jittered, and predcted values
+
+Males = cbind.data.frame(FatherS,FatherS.j,Son,Son.j,Predicted)
+
+
+p <- ggplot(Males, aes(x=FatherS, y=Son)) # initial plot object
+p <- p + geom_point(x=FatherS.j,y=Son.j,shape= 1) # defines scatter type plot
+p <- p + labs(x="Father's height (inches)", y= "Son's height (inches)") # adds x and y axis labels
+p <- p + theme(legend.position="none")#, legend.box = "horizontal") # removes the legend
+p <- p + expand_limits(x = c(55,80),y = c(55,80)) # expand the axis limits
+p <- p + geom_line(aes(FatherS,Predicted),size=1.5) # add previously fitted linear regression line  
+
+p <- p + geom_abline(slope=1, linetype="dashed") # line to represent equality between son and father height
+
+
+# select single data points by CSV datarow numbers
+pointA=c(137)  
+pointB=c(28)
+
+# plot residual line and end points for selectedpointA
+p <- p + geom_point(aes(x=FatherS.j[pointA], y = Predicted[pointA]), shape = 1)
+p <- p + geom_point(aes(x=FatherS.j[pointA], y = Son.j[pointA]), shape = 1)
+p <- p + geom_segment(linetype="dashed", size=1, colour="purple",aes(x=FatherS.j[pointA],y=Son.j[pointA],xend = FatherS.j[pointA], yend = Predicted[pointA])) #p <- p + p
+
+# plot residual line and end points for pointB
+p <- p + geom_point(aes(x=FatherS.j[pointB], y = Predicted[pointB]), shape = 1)
+p <- p + geom_point(aes(x=FatherS.j[pointB], y = Son.j[pointB]), shape = 1)
+p <- p + geom_segment(linetype="dashed", size=1, colour="purple",aes(x=FatherS.j[pointB],y=Son.j[pointB],xend = FatherS.j[pointB], yend = Predicted[pointB]))
+
+p #displays the result
+
+```
+
+Figure 5.1 Scatter of heights of 465 fathers and sons from Galton's data (many fathers are repeated since they have multiple sons). A jitter has been added to separate the points, and the diagonal dashed line represents exact equality between son and father's heights. The solid line is the standard 'best-fit' line. Each point gives rise to a 'residual' (dashed line), which is the size of the error were we to use the line to predict a son's height from his father's.

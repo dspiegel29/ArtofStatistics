@@ -1,0 +1,48 @@
+---
+  title: "Art of Statistics: Figure 8-5 (page 225) Observed and expected daily homocide counts"
+  #output: md_document
+  output: html_document
+---
+***************************************************************************
+
+Data are from [Office for National Statistcs Homicide data, 2017](https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/compendium/focusonviolentcrimeandsexualoffences/yearendingmarch2016/homicide#statistical-interpretation-of-trends-in-homicides)
+
+```{r}
+
+library(ggplot2)
+df<-read.csv("08-5-observed-expected-homicides-x.csv",header=T)
+#attach(df)
+p <- ggplot(df, aes(x= dailyNumberOfRecordedHomicideIncidents)) # constructs initial plot object, p
+
+#colour palette failing on the bars so omitted
+#p <- p + scale_colour_brewer(palette = "Accent") # sets the colour palette 
+
+p <- p + geom_bar(aes(y=Occurences,fill=FiguresType),stat = "identity",position="dodge") # assigns bar-chart type with side by side (dodged) bars
+p <- p + geom_text(aes(x = 6.8, y = 370, label = "Observed Figures", color = "ObservedFigures", hjust=0)) # our custom legend
+p <- p + geom_text(aes(x = 6.8, y = 400, label = "Expected Figures", color = "ExpectedFigures", hjust=0)) # our custom legend
+p <- p + theme(legend.position="none") # removes the default legend
+p <- p +  labs(x="", y="Number of occurences over 3 years")
+p
+
+```
+
+Figure 8.5 Observed and expected (assuming a Poisson distribution) daily number of recorded homicide incidents, 2014 to 2016, England and Wales (ONS data)
+
+
+### Table 10.3 (page 270-272) Hypothesis test of Poisson distribution
+```{r}
+
+n =  0:7
+observed=df$Occurences[df$FiguresType=="ObservedFigures"]
+homicides = n*observed
+mean = sum(homicides)/1095 #  average number per day
+mean
+p=dpois(0:5,mean) # poisson probability up to 5
+p[7]=1-sum(p[1:6])  # probability of 6 or more
+p   # probablities for 0 to 6 or more
+expected=p*1095
+expected # does not match ONS fgures exactly
+chisq.test(observed[-8],p=p) # remove final 0 for 7 or more
+ 
+
+```
