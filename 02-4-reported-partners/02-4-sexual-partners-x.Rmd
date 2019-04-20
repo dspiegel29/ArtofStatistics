@@ -17,10 +17,11 @@ partners <-read.csv("02-4-sexual-partners-counts-x.csv", header=TRUE) # reads da
 
 p <- ggplot(partners, aes(x=NumPartners)) # constructs initial plot object, p
 p <- p + geom_bar(aes(y=Percent,fill=Gender),stat = "identity",position="dodge") # assigns bar-chart type with side by side (dodged) bars
-p <- p + geom_text(aes(x = 30, y = 12, label = "Women 35-44", color = "Female", hjust=0)) # our custom legend
-p <- p + geom_text(aes(x = 30, y = 11, label = "Men 35-44", color = "Male", hjust=0)) # our custom legend
+p <- p + geom_text(aes(x = 20, y = 12, label = "Women 35-44", color = "Female", hjust=0)) # our custom legend
+p <- p + geom_text(aes(x = 20, y = 11, label = "Men 35-44", color = "Male", hjust=0)) # our custom legend
 p <- p + scale_x_continuous(breaks = c(0,5,10,15,20,25,30,35,40,45,50), limits=c(0,50)) # desired x-axis value labels
 p <- p + scale_y_continuous(breaks = c(0,2,4,6,8,10,12,14,16,18)) # desired y-axis value labels
+p <- p + scale_colour_brewer(palette = "Set1") # sets the colour palette 
 p <- p + theme(legend.position="none") # removes the default legend
 p <- p +  labs(x="Reported number of lifetime opposite-sex partners", y="Percentage") # Adds axis labels  
 p # draw the plot

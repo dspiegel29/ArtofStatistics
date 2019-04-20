@@ -1,0 +1,201 @@
+,sampleid,partners,ordering
+1,Original,5,0
+2,Original,20,0
+3,Original,60,0
+4,Original,17,0
+5,Original,6,0
+6,Original,7,0
+7,Original,8,0
+8,Original,40,0
+9,Original,8,0
+10,Original,11,0
+11,Original,6,0
+12,Original,8,0
+13,Original,45,0
+14,Original,29,0
+15,Original,5,0
+16,Original,7,0
+17,Original,6,0
+18,Original,4,0
+19,Original,150,0
+20,Original,8,0
+21,Original,20,0
+22,Original,7,0
+23,Original,11,0
+24,Original,17,0
+25,Original,20,0
+26,Original,20,0
+27,Original,9,0
+28,Original,3,0
+29,Original,17,0
+30,Original,9,0
+31,Original,12,0
+32,Original,1,0
+33,Original,4,0
+34,Original,12,0
+35,Original,4,0
+36,Original,100,0
+37,Original,23,0
+38,Original,2,0
+39,Original,70,0
+40,Original,4,0
+41,Original,5,0
+42,Original,7,0
+43,Original,21,0
+44,Original,29,0
+45,Original,30,0
+46,Original,15,0
+47,Original,1,0
+48,Original,4,0
+49,Original,12,0
+50,Original,1,0
+51,Boot 1,8,1
+52,Boot 1,6,1
+53,Boot 1,7,1
+54,Boot 1,12,1
+55,Boot 1,4,1
+56,Boot 1,1,1
+57,Boot 1,6,1
+58,Boot 1,12,1
+59,Boot 1,8,1
+60,Boot 1,6,1
+61,Boot 1,11,1
+62,Boot 1,6,1
+63,Boot 1,150,1
+64,Boot 1,5,1
+65,Boot 1,4,1
+66,Boot 1,11,1
+67,Boot 1,4,1
+68,Boot 1,12,1
+69,Boot 1,4,1
+70,Boot 1,23,1
+71,Boot 1,29,1
+72,Boot 1,4,1
+73,Boot 1,20,1
+74,Boot 1,6,1
+75,Boot 1,23,1
+76,Boot 1,1,1
+77,Boot 1,40,1
+78,Boot 1,8,1
+79,Boot 1,3,1
+80,Boot 1,40,1
+81,Boot 1,9,1
+82,Boot 1,15,1
+83,Boot 1,7,1
+84,Boot 1,6,1
+85,Boot 1,1,1
+86,Boot 1,15,1
+87,Boot 1,60,1
+88,Boot 1,8,1
+89,Boot 1,4,1
+90,Boot 1,12,1
+91,Boot 1,29,1
+92,Boot 1,17,1
+93,Boot 1,7,1
+94,Boot 1,45,1
+95,Boot 1,4,1
+96,Boot 1,5,1
+97,Boot 1,1,1
+98,Boot 1,17,1
+99,Boot 1,4,1
+100,Boot 1,8,1
+101,Boot 2,21,2
+102,Boot 2,4,2
+103,Boot 2,17,2
+104,Boot 2,9,2
+105,Boot 2,8,2
+106,Boot 2,12,2
+107,Boot 2,11,2
+108,Boot 2,11,2
+109,Boot 2,60,2
+110,Boot 2,8,2
+111,Boot 2,20,2
+112,Boot 2,15,2
+113,Boot 2,100,2
+114,Boot 2,150,2
+115,Boot 2,5,2
+116,Boot 2,7,2
+117,Boot 2,60,2
+118,Boot 2,29,2
+119,Boot 2,29,2
+120,Boot 2,20,2
+121,Boot 2,20,2
+122,Boot 2,1,2
+123,Boot 2,11,2
+124,Boot 2,100,2
+125,Boot 2,6,2
+126,Boot 2,3,2
+127,Boot 2,11,2
+128,Boot 2,4,2
+129,Boot 2,100,2
+130,Boot 2,23,2
+131,Boot 2,1,2
+132,Boot 2,9,2
+133,Boot 2,21,2
+134,Boot 2,8,2
+135,Boot 2,11,2
+136,Boot 2,4,2
+137,Boot 2,11,2
+138,Boot 2,45,2
+139,Boot 2,8,2
+140,Boot 2,23,2
+141,Boot 2,9,2
+142,Boot 2,20,2
+143,Boot 2,150,2
+144,Boot 2,8,2
+145,Boot 2,8,2
+146,Boot 2,8,2
+147,Boot 2,8,2
+148,Boot 2,70,2
+149,Boot 2,7,2
+150,Boot 2,20,2
+151,Boot 3,7,3
+152,Boot 3,9,3
+153,Boot 3,6,3
+154,Boot 3,70,3
+155,Boot 3,1,3
+156,Boot 3,5,3
+157,Boot 3,12,3
+158,Boot 3,21,3
+159,Boot 3,6,3
+160,Boot 3,70,3
+161,Boot 3,12,3
+162,Boot 3,150,3
+163,Boot 3,7,3
+164,Boot 3,100,3
+165,Boot 3,7,3
+166,Boot 3,70,3
+167,Boot 3,7,3
+168,Boot 3,8,3
+169,Boot 3,17,3
+170,Boot 3,11,3
+171,Boot 3,3,3
+172,Boot 3,29,3
+173,Boot 3,17,3
+174,Boot 3,7,3
+175,Boot 3,70,3
+176,Boot 3,5,3
+177,Boot 3,40,3
+178,Boot 3,21,3
+179,Boot 3,4,3
+180,Boot 3,17,3
+181,Boot 3,4,3
+182,Boot 3,40,3
+183,Boot 3,17,3
+184,Boot 3,6,3
+185,Boot 3,4,3
+186,Boot 3,30,3
+187,Boot 3,12,3
+188,Boot 3,9,3
+189,Boot 3,6,3
+190,Boot 3,1,3
+191,Boot 3,70,3
+192,Boot 3,8,3
+193,Boot 3,20,3
+194,Boot 3,8,3
+195,Boot 3,8,3
+196,Boot 3,21,3
+197,Boot 3,11,3
+198,Boot 3,17,3
+199,Boot 3,6,3
+200,Boot 3,20,3

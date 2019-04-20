@@ -1,0 +1,380 @@
+Country,District,n,d
+Scotland ,Aberdeen City ,63,286755
+Scotland ,Aberdeenshire ,65,358324
+Scotland ,Angus ,35,205399
+Northern Ireland ,Antrim ,12,56953
+Northern Ireland ,Ards ,20,102145
+Scotland ,Argyll and Bute ,39,157449
+Northern Ireland ,Armagh ,13,69002
+Northern Ireland ,Ballymena ,12,83160
+Northern Ireland ,Ballymoney ,6,35191
+Northern Ireland ,Banbridge ,16,58910
+Northern Ireland ,Belfast ,79,317780
+Northern Ireland ,Carrickfergus ,12,46261
+Northern Ireland ,Castlereagh ,16,120937
+England ,Central Bedfordshire ,55,328947
+England ,Cheshire East ,101,627719
+England ,Cheshire West and Chester ,101,544181
+Scotland ,Clackmannanshire ,16,73631
+Northern Ireland ,Coleraine ,14,86420
+Northern Ireland ,Craigavon ,25,99483
+Northern Ireland ,Derry ,17,103406
+Northern Ireland ,Down ,18,90680
+Scotland ,Dumfries and Galloway ,47,279263
+Scotland ,Dundee City ,54,227656
+Northern Ireland ,Dungannon ,12,54127
+Scotland ,East Ayrshire ,38,181731
+Scotland ,East Dunbartonshire ,28,151515
+Scotland ,East Lothian ,28,145228
+Scotland ,East Renfrewshire ,26,128968
+Scotland ,Falkirk ,56,202899
+Northern Ireland ,Fermanagh ,20,74432
+Scotland ,Fife ,102,538259
+Scotland ,Glasgow City,210,675458
+Scotland ,Highland ,73,332726
+Scotland ,Inverclyde ,26,117117
+Northern Ireland ,Larne ,11,39942
+Northern Ireland ,Limavady ,7,32573
+Northern Ireland ,Lisburn ,28,141200
+Northern Ireland ,Magherafelt ,7,45872
+Scotland ,Midlothian ,20,117096
+Scotland ,Moray ,30,141243
+Northern Ireland ,Newry and Mourne ,21,106653
+Northern Ireland ,Newtownabbey ,18,112570
+Scotland ,North Ayrshire ,44,209324
+Northern Ireland ,North Down ,22,125930
+Scotland ,North Lanarkshire ,96,406952
+Northern Ireland ,Omagh ,13,72707
+Scotland ,Orkney Islands ,11,36826
+Scotland ,Perth and Kinross ,47,259096
+Scotland ,Renfrewshire ,47,230845
+Scotland ,Scottish Borders ,50,198570
+Scotland ,Shetland Islands ,6,31332
+Scotland ,South Ayrshire ,30,219941
+Scotland ,South Lanarkshire ,80,424628
+Scotland ,Stirling ,13,130000
+Northern Ireland ,Strabane ,6,53004
+England ,The Borough of Allerdale ,34,166422
+England ,The Borough of Amber Valley ,36,187013
+England ,The Borough of Ashford ,28,196078
+England ,The Borough of Barnsley ,67,314998
+England ,The Borough of Barrow-in-Furness ,23,107527
+England ,The Borough of Basingstoke and Deane ,30,203528
+England ,The Borough of Bedford ,38,194772
+England ,The Borough of Blackburn with Darwen ,32,156709
+England ,The Borough of Blackpool ,48,261296
+England ,The Borough of Bolton ,48,359551
+England ,The Borough of Boston ,24,103672
+England ,The Borough of Bournemouth ,46,307281
+England ,The Borough of Bracknell Forest ,26,125969
+England ,The Borough of Brentwood ,23,141713
+England ,The Borough of Broxbourne ,24,122200
+England ,The Borough of Broxtowe ,38,194076
+England ,The Borough of Burnley ,22,129108
+England ,The Borough of Bury ,38,256065
+England ,The Borough of Calderdale ,52,272109
+England ,The Borough of Castle Point ,20,158730
+England ,The Borough of Charnwood ,33,217391
+England ,The Borough of Chelmsford ,34,232399
+England ,The Borough of Cheltenham ,35,159963
+England ,The Borough of Chesterfield ,33,172234
+England ,The Borough of Chorley ,28,156687
+England ,The Borough of Christchurch ,15,149551
+England ,The Borough of Colchester ,42,246190
+England ,The Borough of Congleton ,25,118259
+England ,The Borough of Corby ,18,78057
+England ,The Borough of Crawley ,13,141458
+England ,The Borough of Dacorum ,42,207818
+England ,The Borough of Darlington ,21,140093
+England ,The Borough of Dartford ,14,138340
+England ,The Borough of Doncaster ,93,455436
+England ,The Borough of Dudley ,100,495540
+England ,The Borough of East Staffordshire ,36,160071
+England ,The Borough of Eastbourne ,37,206128
+England ,The Borough of Eastleigh ,31,175240
+England ,The Borough of Elmbridge ,30,175541
+England ,The Borough of Epsom and Ewell ,18,104590
+England ,The Borough of Erewash ,29,177370
+England ,The Borough of Fareham ,34,194175
+England ,The Borough of Fylde ,29,180685
+England ,The Borough of Gateshead ,51,315399
+England ,The Borough of Gedling ,36,186819
+England ,The Borough of Gosport ,16,139252
+England ,The Borough of Gravesham ,19,145929
+England ,The Borough of Great Yarmouth ,31,182783
+England ,The Borough of Guildford ,30,186220
+England ,The Borough of Halton ,35,139888
+England ,The Borough of Harrogate ,38,268931
+England ,The Borough of Hartlepool ,31,117692
+England ,The Borough of Hastings ,31,127888
+England ,The Borough of Havant ,26,216126
+England ,The Borough of Hertsmere ,24,132377
+England ,The Borough of High Peak ,25,126008
+England ,The Borough of Hinckley and Bosworth ,32,190590
+England ,The Borough of Hyndburn ,24,105171
+England ,The Borough of Ipswich ,35,163628
+England ,The Borough of Kettering ,17,130268
+England ,The Borough of King's Lynn and West Norfolk ,49,269231
+England ,The Borough of Kirklees ,84,517241
+England ,The Borough of Knowsley ,45,201432
+England ,The Borough of Luton ,29,219199
+England ,The Borough of Maidstone ,25,220848
+England ,The Borough of Medway ,65,312350
+England ,The Borough of Melton ,17,87179
+England ,The Borough of Middlesbrough ,26,177112
+England ,The Borough of Milton Keynes ,59,249155
+England ,The Borough of Newcastle-under-Lyme ,30,190355
+England ,The Borough of North East Lincolnshire ,40,259235
+England ,The Borough of North Lincolnshire ,40,251099
+England ,The Borough of North Tyneside ,60,287770
+England ,The Borough of North Warwickshire ,16,92379
+England ,The Borough of Northampton ,49,283401
+England ,The Borough of Nuneaton and Bedworth ,23,170370
+England ,The Borough of Oadby and Wigston ,15,90525
+England ,The Borough of Oldham ,35,300687
+England ,The Borough of Pendle ,22,113578
+England ,The Borough of Poole ,42,229508
+England ,The Borough of Preston ,31,179398
+England ,The Borough of Reading ,22,179007
+England ,The Borough of Redcar and Cleveland ,43,215108
+England ,The Borough of Redditch ,20,103466
+England ,The Borough of Reigate and Banstead ,36,216216
+England ,The Borough of Ribble Valley ,18,96774
+England ,The Borough of Rochdale ,40,276434
+England ,The Borough of Rossendale ,7,76419
+England ,The Borough of Rotherham ,68,369967
+England ,The Borough of Rugby ,22,140127
+England ,The Borough of Runnymede ,31,134141
+England ,The Borough of Rushcliffe ,30,177305
+England ,The Borough of Rushmoor ,21,104478
+England ,The Borough of Sandwell ,81,374653
+England ,The Borough of Scarborough ,44,229765
+England ,The Borough of Sedgemoor ,36,195228
+England ,The Borough of Sefton ,91,465235
+England ,The Borough of Slough ,22,134392
+England ,The Borough of Solihull ,55,326992
+England ,The Borough of South Ribble ,24,174292
+England ,The Borough of South Tyneside ,57,242450
+England ,The Borough of Southend-on-Sea ,46,286962
+England ,The Borough of Spelthorne ,24,169372
+England ,The Borough of St Edmundsbury ,33,173959
+England ,The Borough of St Helens ,52,255277
+England ,The Borough of Stafford ,32,206852
+England ,The Borough of Stevenage ,20,99800
+England ,The Borough of Stockport ,60,430108
+England ,The Borough of Stockton-on-Tees ,48,260728
+England ,The Borough of Surrey Heath ,24,109240
+England ,The Borough of Swale ,41,184353
+England ,The Borough of Swindon ,44,243902
+England ,The Borough of Tameside ,51,292599
+England ,The Borough of Tamworth ,18,90180
+England ,The Borough of Taunton Deane ,33,199637
+England ,The Borough of Telford and Wrekin ,41,202469
+England ,The Borough of Test Valley ,26,185582
+England ,The Borough of Tewkesbury ,21,122306
+England ,The Borough of Thurrock ,30,175850
+England ,The Borough of Tonbridge and Malling ,25,157828
+England ,The Borough of Torbay ,35,278441
+England ,The Borough of Trafford ,41,326433
+England ,The Borough of Tunbridge Wells ,25,151240
+England ,The Borough of Walsall ,74,362035
+England ,The Borough of Warrington ,45,268336
+England ,The Borough of Watford ,14,92593
+England ,The Borough of Waverley ,36,218845
+England ,The Borough of Wellingborough ,13,101483
+England ,The Borough of Welwyn Hatfield ,35,156390
+England ,The Borough of West Devon ,15,108460
+England ,The Borough of Weymouth and Portland ,29,155663
+England ,The Borough of Wigan ,81,420124
+England ,The Borough of Wirral ,110,542139
+England ,The Borough of Woking ,29,122777
+England ,The Borough of Worthing ,27,163934
+England ,The Borough of Wyre ,40,228833
+England ,The City of Birmingham ,251,1268959
+England ,The City of Bradford ,105,606936
+England ,The City of Brighton and Hove ,59,352239
+England ,The City of Bristol ,91,476689
+England ,The City of Cambridge ,19,141264
+England ,The City of Canterbury ,33,291777
+England ,The City of Carlisle ,32,160240
+England ,The City of Coventry ,72,411899
+England ,The City of Derby ,62,318930
+Scotland ,The City of Edinburgh ,119,612140
+England ,The City of Exeter ,29,171496
+England ,The City of Gloucester ,28,168067
+England ,The City of Kingston upon Hull ,62,315041
+England ,The City of Lancaster ,39,214758
+England ,The City of Leeds ,166,959538
+England ,The City of Leicester ,62,331020
+England ,The City of Lincoln ,18,137720
+England ,The City of Liverpool ,113,544578
+England ,The City of Manchester ,80,457404
+England ,The City of Newcastle upon Tyne ,68,355649
+England ,The City of Norwich ,32,172136
+England ,The City of Nottingham ,67,302483
+England ,The City of Oxford ,21,157658
+England ,The City of Peterborough ,29,209689
+England ,The City of Plymouth ,59,398649
+England ,The City of Portsmouth ,39,266030
+England ,The City of Salford ,65,290308
+England ,The City of Sheffield ,128,757396
+England ,The City of Southampton ,67,267252
+England ,The City of St Albans ,32,192655
+England ,The City of Stoke-on-Trent ,71,351137
+England ,The City of Sunderland ,90,408719
+England ,The City of Wakefield ,93,474006
+England ,The City of Westminster ,29,276982
+England ,The City of Winchester ,21,166139
+England ,The City of Wolverhampton ,75,362669
+England ,The City of Worcester ,29,116983
+England ,The City of York ,49,314910
+England ,The County of Cornwall ,164,1062176
+England ,The County of County Durham ,136,786582
+England ,The County of Herefordshire ,65,357733
+England ,The County of Northumberland ,106,564731
+England ,The County of Shropshire ,104,510806
+England ,The County of Wiltshire ,133,711610
+England ,The District of Adur ,25,134192
+England ,The District of Arun ,53,298928
+England ,The District of Ashfield ,25,202429
+England ,The District of Aylesbury Vale ,28,234310
+England ,The District of Babergh ,20,161160
+England ,The District of Basildon ,44,233051
+England ,The District of Bassetlaw ,24,165975
+England ,The District of Bath and North East Somerset ,43,295939
+England ,The District of Blaby ,14,149413
+England ,The District of Bolsover ,20,121951
+England ,The District of Braintree ,43,233062
+England ,The District of Breckland ,45,244167
+England ,The District of Broadland ,46,233978
+England ,The District of Bromsgrove ,20,152555
+England ,The District of Cannock Chase ,22,126219
+England ,The District of Cherwell ,42,188595
+England ,The District of Chichester ,38,239596
+England ,The District of Chiltern ,23,147815
+England ,The District of Cotswold ,30,152672
+England ,The District of Craven ,18,110294
+England ,The District of Daventry ,21,118110
+England ,The District of Derbyshire Dales ,18,140187
+England ,The District of Dover ,28,202312
+England ,The District of East Cambridgeshire ,19,145594
+England ,The District of East Devon ,64,326198
+England ,The District of East Dorset ,31,225291
+England ,The District of East Hampshire ,28,172308
+England ,The District of East Hertfordshire ,29,182735
+England ,The District of East Lindsey ,50,311333
+England ,The District of East Northamptonshire ,23,130017
+England ,The District of East Riding ,95,578211
+England ,The District of Eden ,13,93999
+England ,The District of Epping Forest ,35,196298
+England ,The District of Fenland ,33,167258
+England ,The District of Forest Heath ,15,86009
+England ,The District of Forest of Dean ,17,143218
+England ,The District of Hambleton ,18,147662
+England ,The District of Harborough ,17,146425
+England ,The District of Harlow ,12,104348
+England ,The District of Hart ,28,118393
+England ,The District of Horsham ,36,213397
+England ,The District of Huntingdonshire ,31,226443
+England ,The District of Lewes ,26,209847
+England ,The District of Lichfield ,37,154489
+England ,The District of Maldon ,17,102843
+England ,The District of Malvern Hills ,24,161399
+England ,The District of Mansfield ,26,129935
+England ,The District of Mendip ,36,185090
+England ,The District of Mid Devon ,26,128142
+England ,The District of Mid Suffolk ,29,170890
+England ,The District of Mid Sussex ,46,218320
+England ,The District of Mole Valley ,28,145078
+England ,The District of New Forest ,56,431101
+England ,The District of Newark and Sherwood ,36,193340
+England ,The District of North Devon ,29,184478
+England ,The District of North Dorset ,26,140162
+England ,The District of North East Derbyshire ,33,159652
+England ,The District of North Hertfordshire ,36,188285
+England ,The District of North Kesteven ,36,179194
+England ,The District of North Norfolk ,56,256528
+England ,The District of North Somerset ,45,367647
+England ,The District of North West Leicestershire ,23,139141
+England ,The District of Purbeck ,20,78833
+England ,The District of Richmondshire ,14,68594
+England ,The District of Rochford ,14,150376
+England ,The District of Rother ,49,225495
+England ,The District of Rutland ,8,72595
+England ,The District of Ryedale ,16,103226
+England ,The District of Selby ,26,123223
+England ,The District of Sevenoaks ,30,186800
+England ,The District of Shepway ,35,195531
+England ,The District of South Bucks ,14,145985
+England ,The District of South Cambridgeshire ,37,220501
+England ,The District of South Derbyshire ,27,130435
+England ,The District of South Gloucestershire ,51,359661
+England ,The District of South Hams ,35,170068
+England ,The District of South Holland ,31,167840
+England ,The District of South Kesteven ,33,218110
+England ,The District of South Lakeland ,41,220786
+England ,The District of South Norfolk ,38,233990
+England ,The District of South Northamptonshire ,27,117340
+England ,The District of South Oxfordshire ,38,196078
+England ,The District of South Somerset ,48,294840
+England ,The District of South Staffordshire ,26,181438
+England ,The District of Staffordshire Moorlands ,24,168658
+England ,The District of Stratford-on-Avon ,24,216802
+England ,The District of Stroud ,31,188107
+England ,The District of Suffolk Coastal ,41,232558
+England ,The District of Tandridge ,24,118519
+England ,The District of Teignbridge ,40,271555
+England ,The District of Tendring ,55,343321
+England ,The District of Thanet ,39,278373
+England ,The District of Three Rivers ,18,131195
+England ,The District of Torridge ,21,122164
+England ,The District of Uttlesford ,22,114049
+England ,The District of Vale of White Horse ,31,189602
+England ,The District of Warwick ,32,188568
+England ,The District of Waveney ,42,210105
+England ,The District of Wealden ,53,283726
+England ,The District of West Berkshire ,29,203224
+England ,The District of West Dorset ,40,263852
+England ,The District of West Lancashire ,26,179310
+England ,The District of West Lindsey ,28,128146
+England ,The District of West Oxfordshire ,29,172722
+England ,The District of West Somerset ,13,93593
+England ,The District of Wokingham ,24,193861
+England ,The District of Wychavon ,36,223048
+England ,The District of Wycombe ,37,234177
+England ,The District of Wyre Forest ,33,157668
+England ,The Isle of Wight ,44,268456
+England ,The London Borough of Barking and Dagenham ,32,178472
+England ,The London Borough of Barnet ,58,428677
+England ,The London Borough of Bexley ,42,345679
+England ,The London Borough of Brent ,37,281155
+England ,The London Borough of Bromley ,86,492554
+England ,The London Borough of Camden ,27,171756
+England ,The London Borough of Croydon ,66,408669
+England ,The London Borough of Ealing ,47,318428
+England ,The London Borough of Enfield ,62,338243
+England ,The London Borough of Greenwich ,37,220632
+England ,The London Borough of Hackney ,27,171537
+England ,The London Borough of Hammersmith and Fulham ,28,158014
+England ,The London Borough of Haringey ,36,187696
+England ,The London Borough of Harrow ,40,273038
+England ,The London Borough of Havering ,64,389531
+England ,The London Borough of Hillingdon ,56,327677
+England ,The London Borough of Hounslow ,44,224261
+England ,The London Borough of Islington ,25,149790
+England ,The London Borough of Lambeth ,38,228365
+England ,The London Borough of Lewisham ,45,242066
+England ,The London Borough of Merton ,42,234506
+England ,The London Borough of Newham ,38,193581
+England ,The London Borough of Redbridge ,44,338201
+England ,The London Borough of Richmond upon Thames ,28,215716
+England ,The London Borough of Southwark ,42,214944
+England ,The London Borough of Sutton ,38,259032
+England ,The London Borough of Tower Hamlets ,34,170512
+England ,The London Borough of Waltham Forest ,37,219585
+England ,The London Borough of Wandsworth ,51,241935
+England ,The Royal Borough of Kensington and Chelsea ,32,224090
+England ,The Royal Borough of Kingston upon Thames ,26,208333
+England ,The Royal Borough of Windsor and Maidenhead ,39,229142
+Scotland ,West Dunbartonshire ,21,131004
+Scotland ,West Lothian ,41,189202

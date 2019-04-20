@@ -1,0 +1,85 @@
+---
+  title: "Art of Statistics: Figure 10.2. (page 263)  Permutation test for arm crossing"
+  #output: md_document
+  output: html_document
+---
+
+
+Data is contained in [10-2-arms-data-x.csv](10-2-arms-data-x.csv)  and was collected at AIMS (African Institute for Mathematical Sciences).
+```{r}
+library(ggplot2)
+library(ggpubr)
+
+class.frame <- read.csv("10-2-arms-data-x.csv", header=T)
+summary(class.frame) # to check variable names, missing data etc
+# Note that text variables are read in as 'factors': categorical variables taking values from a list
+attach(class.frame)  # so can use names directly
+table(gender,armcross)
+
+# first do hypergeometric, plotted against difference in proportions
+# females = white balls, males = black balls, right-arm=balls drawn, x= bottom-left cell
+
+x = seq(14:0)
+y = dhyper(x,14,40,32) 
+female.prop = 100*x/14
+male.prop = 100*(32-x)/40
+diff=female.prop-male.prop
+
+#change this into 1000 datapoints taking on values of diff
+hyper.count= round(1000*y)
+cum.hyper.count=cumsum(hyper.count)
+diff.hyper.count=rep(0,1000)
+for(i in 3:(length(diff)-1)){  # start at first non-zero element 
+    diff.hyper.count[cum.hyper.count[i-1]:cum.hyper.count[i]]  = diff[i]
+}
+diff.hyper.count.frame=as.data.frame(diff.hyper.count)
+
+# now have to do 1,000 samples without replacement
+# trick: vector of arms, then permute
+# count number of right-handers in first 14!  YES easy
+right.arm = c(rep(0,22),rep(1,32)) 
+diff.sample = rep(0,1000)
+for(i in 1:1000){
+  r=sample(right.arm,54,replace=F)
+  female.right = sum(r[1:14])
+  male.right = 32 - female.right
+  diff.sample[i] = 100*(female.right/14 - male.right/40)
+}
+diff.sample.frame=as.data.frame(diff.sample)
+
+
+p <- ggplot(diff.sample.frame) # assign dataframe to plot object, p
+p <- p + geom_histogram(aes(diff.sample)) # give it histogram type
+p =  p + expand_limits(x=c(-60, 60))
+p <- p + labs(x=NULL, y="Frequency", title="(a) Random permutations")
+p <- p + geom_vline(xintercept=7, col="red", linetype="dashed") # adds horizontal reference line at x=7
+
+q <- ggplot(diff.hyper.count.frame) # assign dataframe to plot object, q
+q <- q + geom_histogram(aes(diff.hyper.count)) # give it histogram type
+q =  q + expand_limits(x=c(-60, 60))
+q <- q + labs(x=NULL, y="",title="(b) All possible permutqtions")
+q <- q + geom_vline(xintercept=7, col="red", linetype="dashed") # adds horizontal reference line at x=7
+
+p <- ggarrange(p,q, ncol=2, nrow=1) # arrange the to plots with ggarrange
+p
+```
+                  
+Figure 10.2 Empirical distribution of difference in proportions of women and men who crossed their arms with their right arm on top:
+(a) from 1,000 random permutations of   arm-crossing,
+(b) from all possible equally likely permutations of the arm-crossing response.
+The observed difference in proportions (7%) is indicated by a vertical dashed line.
+
+
+## Hypothesis tests
+```{r}
+
+x=matrix(c(5,17,9,23),2,2)
+chisq.test(x)
+prop.test(c(9,23),c(14,40))
+fisher.test(x)
+x
+
+# chance of at least 7% diff = chance that female rights is at least  9
+1-phyper(8,14,40,32) 
+```
+

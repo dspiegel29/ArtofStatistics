@@ -5,17 +5,32 @@
 ---
 ### At what time of day did Harold Shipman's victims die?
 
-Data are contained in [00-2-shipman-times-x.csv](00-2-shipman-times-x.csv), and taken from [Harold Shipman's Clinical Practice 1974-1998: A Clinical Audit Commissioned by the Chief Medical Officer, by Richard Baker, page 40, Figure 5.2](https://webarchive.nationalarchives.gov.uk/20090808160000/http://www.the-shipman-inquiry.org.uk/ge_doclist.asp?ID=5), derived from the cremation forms of Shipman's victims.
+Data are contained in [0-2-shipman-times-x.csv](0-2-shipman-times-x.csv), and taken from [Harold Shipman's Clinical Practice 1974-1998: A Clinical Audit Commissioned by the Chief Medical Officer, by Richard Baker, page 40, Figure 5.2](https://webarchive.nationalarchives.gov.uk/20090808160000/http://www.the-shipman-inquiry.org.uk/ge_doclist.asp?ID=5), derived from the cremation forms of Shipman's victims.
 ```{r}
 
 library(ggplot2)
 shipmantimes<-read.csv("00-2-shipman-times-x.csv", header=TRUE) # reads data into shipmantimes data frame
+
+attach(shipmantimes)
+```
+
+# Plot using R Base graphics
+
+```{r}
+plot(Hour+0.5,Shipman,type="l",lwd=2,ylab="Percentage of deaths",xlab="hour",ylim=c(0,16))
+par(new=T)
+plot(Hour+0.5,Comparison,type="l",lwd=2,xlab="",ylab="",ylim=c(0,16),lty=6)
+legend(0,14,c("Shipman","comparison GPs"),lty=c(1,6),bty="n",lwd=2)
+```
+
+# Now using ggplot2
+
+```{r}
 p <- ggplot(shipmantimes, aes(x=Hour, y)) + ylim(0,15) # constructs initial plot object, p
 p <- p + geom_line(aes(y = Comparison, col = "Comparison GPs"), size=1.5) # adds a y-series
 p <- p + geom_line(aes(y = Shipman, col = "Shipman"), size=1.5) # adds a y-series
 p <- p +  labs(title="Deaths by Hour of Day", subtitle="From Shipman dataset", y="% of Deaths", x="Hour of Day") # Adds title, subtitle
-p <- p + scale_colour_brewer(palette = "Accent") # sets the colour palette 
-p <- p  + scale_size_continuous(name = "Size", guide = FALSE)  # turns off otherwise added size legend
+p <- p + scale_colour_brewer(palette = "Set1") # sets the colour palette 
 p <- p + theme(legend.position="none")#, legend.box = "horizontal") # removes the legend
 
 p <- p + geom_text(aes(x = 11, y = 12, label = "Shipman", color = "Shipman"))

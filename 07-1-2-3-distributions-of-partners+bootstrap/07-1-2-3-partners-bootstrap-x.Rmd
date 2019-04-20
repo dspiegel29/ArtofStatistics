@@ -1,0 +1,197 @@
+---
+  title: "Art of Statistics: Figure 7.1 (Page 193), 7.2 (page 196) 7.3 (page 198) Sexual Partners Bootstrap"
+  #output: md_document
+  output: html_document
+---
+
+Data are contained in [07-sexual-partners-reduced.csv](07-sexual-partners-reduced.csv), and comprise the distribution, in percentages rounded to 1 decimal place, of the reported lifetime number of opposite-sex partners for men and women aged 35-44. 
+
+The data is stored at interim stages, for example, "# Book figure 7-1 datasnatch here" for the exact source-points of the CSV's used.  Code for the book figures is at the bottom.
+
+#Data Preparation
+
+```{r}
+# libraries
+library("ggplot2")
+library("reshape2")
+
+# set seed for reproducibility
+set.seed(12321)
+
+
+### Output Params
+
+LabelPts <- 14
+MainPts <- 15
+AxisPts <- 14
+DefaultTheme <- theme(strip.text=element_text(size=LabelPts), 
+                      plot.title=element_text(size=MainPts),
+                      axis.title=element_text(size=AxisPts))
+
+
+### Read in the data 
+#   - percentage of respondents with given lifetime number of sexual parteners
+SexData <- read.csv("07-sexual-partners-reduced.csv")
+
+### Sample sizes
+NMen <- 796
+NWom <- 1100
+
+### Extract useful information from table
+NumPartners <- SexData$NumPartners
+
+# Renormalise percentages to account for rounding errors before bootstrap
+PMen <- SexData$PercMen / sum(SexData$PercMen)
+PWom <- SexData$PercWomen / sum(SexData$PercWomen)
+
+DistMen=round(PMen*NMen)
+sum(DistMen) # 802, rather than desired 796.
+
+### Sampling parameters
+
+sample_n <- function(n, prob=PMen){ sample(NumPartners, n, prob=prob, replace=TRUE) } # sample n with replacement from data distribution
+
+#sample_stat <- function(n, prob=PMen, statf=mean){ 
+#  sapply(rep(n, NumSubSamples), function(i){statf(sample_n(i, prob=prob))})
+#}
+
+### Single samples
+
+SubSampleSizes <- c(10, 50, 200, NMen)
+
+#draw nested subsamples
+Samples4Boot <- lapply(1:4, function(i){rnorm(10)})
+Samples4Boot[[4]] <- sample_n(SubSampleSizes[4])
+# this is using a bootstrap sample rather than actual distribution
+for(i in 1:3){
+  Size_ <- SubSampleSizes[4-i]
+  Sample_ <- Samples4Boot[[5-i]]
+  Samples4Boot[[4-i]] <- sample(Sample_, Size_, replace=F)  # should not be with replacement
+}
+
+SamplesMeans <- sapply(Samples4Boot, mean)
+SamplesMedians <- sapply(Samples4Boot, median)
+
+### 7-1 Overlaid frequency plots for different sample sizes
+
+SamplesKeys <- sapply(Samples4Boot , function(s){as.integer( dimnames( table( s ) )[[1]] )} )
+SamplesCounts <- sapply(Samples4Boot , function(s){ 
+  x <- as.integer( table( s ))
+  x/sum(x)
+})
+
+FreqDF <- cbind(melt(SamplesCounts, id="x")[,1], melt(SamplesKeys, id="x"))
+names(FreqDF) <- c("count", "partners", "size")
+for(i in 1:4){
+  FreqDF$size[FreqDF$size == i] = SubSampleSizes[i]
+}
+FreqDFSizes <- as.factor(FreqDF$size)
+levels(FreqDFSizes) <- sapply(SubSampleSizes, function(n){paste("N=",n,sep="")})
+FreqDF$size <- FreqDFSizes
+ClippedDF <- FreqDF[FreqDF$partners<51,]
+
+# Book figure 7-1 datasnatch here
+#write.csv(ClippedDF, "7-1 datasnatch.csv") # WARNING: uncommenting will overwrite existing file and lose alterations to appropriately label and reorder
+
+# Reduced to N=50, N=796
+ClippedDF2 <- rbind( ClippedDF[ ClippedDF$size == "N=50",], ClippedDF[ ClippedDF$size == "N=796",] )
+
+# 7-2 Bootstrap resamples from N=50 subsample
+
+SubSamp50 <- Samples4Boot[[2]]
+NumResamps <- 4 # 3+1 
+
+BootResamples50 <- lapply(1:NumResamps, function(i, sub_samp=SubSamp50){sample(sub_samp, size=length(sub_samp), replace=TRUE)})
+BootResamples50[[1]] <- SubSamp50 #overwrite with the original
+
+# get means [done very clumsily]
+resamplemeans=rep(0,4)
+for(i in 1:NumResamps){
+  resamplemeans[i]=mean(BootResamples50[[i]])
+}
+resamplemeans
+
+sampleid <- as.factor(unlist(lapply(1:4, function(n){rep(n, length(SubSamp50))})))
+levels(sampleid) <- c("True", "Boot 1", "Boot 2", "Boot 3")
+BootFrame50 <- data.frame(sampleid=sampleid, 
+                          partners=unlist(BootResamples50) )
+
+# Book figure 7-2 datasnatch here
+#write.csv(BootFrame50, "7-2 datasnatch.csv") # WARNING: uncommenting will overwrite existing file and lose alterations to appropriately label and reorder
+
+### 7-3 Bootstrap on subsample
+
+NumSubSamples <- 1000
+
+BootSampleMenMeans <- lapply(Samples4Boot, function(sub_samp){
+  sapply(1:NumSubSamples, function(i){mean( sample(sub_samp, size=length(sub_samp), replace=TRUE))} )
+})
+BootSampleMenMedians <- lapply(Samples4Boot, function(sub_samp){
+  sapply(1:NumSubSamples, function(i){median( sample(sub_samp, size=length(sub_samp), replace=TRUE))} )
+})
+
+# get 95% intervals [done very clumsily]
+resample_low=resample_high=rep(0,4)
+for(i in 1:4){
+  resample_low[i]=quantile(BootSampleMenMeans[[i]],0.025)
+  resample_high[i]=quantile(BootSampleMenMeans[[i]],0.975)
+}
+resample_low
+resample_high
+
+
+# Set up for stacked histograms
+Sizes4BootFrame <- as.factor(unlist(lapply(SubSampleSizes, function(n){rep(n, NumSubSamples)})))
+levels(Sizes4BootFrame) <- sapply(SubSampleSizes, function(n){paste("N=",n,sep="")})
+BootFrame <- data.frame(size=Sizes4BootFrame,
+                        means=unlist(BootSampleMenMeans),
+                        medians=unlist(BootSampleMenMedians))
+
+# Book figure 7-3 datasnatch here
+# write.csv(BootFrame, "7-3 datasnatch.csv") # WARNING: uncommenting will overwrite existing file and lose alterations to appropriately label and reorder
+
+```
+
+## Figure 7-1
+
+```{r}
+library(ggplot2)
+ClippedDF <- read.csv("7-1 datasnatch.csv") #read data into dataframe, ClippedDF
+p <- ggplot(aes(x=partners, y=count), data=ClippedDF) # assign plot from dataset to p
+p <- p + geom_bar(stat="identity") # assign bar-chart type to plot
+p <- p + facet_grid(reorder(size,ordering) ~ .) # assign facet grid on size, with order defined by data column 'ordering'
+p <- p + xlab("Number of partners")+ ylab("Probability") # assigns the axis labels
+p # displays plot
+```
+
+Figure 7.1 The bottom panel shows the distribution of responses of all 796 men in the survey. Individuals are successively sampled at random from this group, pausing at samples of size 10, 50, 200, producing the distributions in the top three panels. Smaller sample sizes show a more variable pattern, but the shape of the distribution gradually approaches that of the whole group of 796 men. Values above 50 partners are not shown.
+
+
+## Figure 7-2
+```{r}
+
+
+
+BootFrame50 <- read.csv("7-2 datasnatch.csv") # assign data to dataframe, BootFrame50
+p <- ggplot(BootFrame50) # assign dataframe to plot, p
+p <- p + geom_histogram(aes(x=partners), binwidth=1) # assign histogram chart-type to p
+p <- p + facet_grid(reorder(sampleid, ordering) ~ .) # assign facet frame on sampleid, with order defined by data column 'ordering'
+p <- p + xlab("Partners") + ylab("Count") # assigns axis labels
+p
+```
+
+Figure 7.2 The original sample of 50 observations, and three 'bootstrap' r  es amples, each based on sampling 50 observations at random from the original set, replacing the sampled data-point each time. For example, an observation of 40 partners occurs once in the original sample (on the far right). This d  ata-p  oint was sampled once in the first bootstrap sample, three times in the second, and twice in the third.
+
+## Figure 7-3 Plot the bootstrap means
+
+```{r}
+
+BootFrame <- read.csv("7-3 datasnatch.csv") # assign data to dataframe, BootFrame
+p <- ggplot(aes(x=means), data=BootFrame) # assign plot object defined by dataframe to p
+p <- p + geom_histogram(binwidth=1) # assign histogram chart-type to the plot
+p <- p + facet_grid(reorder(size, ordering) ~ .) # define facet by size on plot, with reordering defined by data column 'ordering'
+p <- p + xlab("Number of partners") + ylab("Density") # assign axis labels
+p # draws the plot
+```
+
+Figure 7.3 \Distribution of sample means of 1,000 bootstrap resamples, for each of the original samples shown in Figure 7.1. The variability of the sample means of the bootstrap resamples decreases as the sample size increases.

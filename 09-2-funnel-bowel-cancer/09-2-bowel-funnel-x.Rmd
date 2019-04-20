@@ -1,0 +1,47 @@
+---
+  title: "Art of Statistics: Figure 9-2 (pafe 235) Funnel plot of bowel cancer rates"
+  #output: md_document
+  output: html_document
+---
+***************************************************************************
+
+
+
+The date are discussed in a blog by Paul Barden on the [Understanding Uncertainty site](https://understandinguncertainty.org/three-fold-variation-uk-bowel-cancer-death-rates)
+
+and on his [own blog](https://pb204.blogspot.com/2011/09/im-grateful-to-david-spiegelhalter-of.html)
+```{r}
+
+library(ggplot2)
+
+bowel.data<-read.csv("09-2-bowel-cancer-data-x.csv",header=T)
+summary(bowel.data)
+ attach(bowel.data)
+mean.prop=sum(n)/sum(d)
+props=n/d
+max.props=max(props)
+  
+# try funnelR package
+library(funnelR)
+
+# Numerator must be called n, denomnator d
+funnel_limits   <- fundata(input=bowel.data,benchmark=mean.prop, alpha=0.95, alpha2=0.998, method='approximate', step=100)
+
+
+funnel_plot     <- funplot(input=bowel.data, fundata=funnel_limits)
+
+funnel_plot = funnel_plot + coord_cartesian(ylim = c(0,max.props) )
+  
+#funnel_plot = funnel_plot + geom_hline(yintercept=mean.prop, colour="darkred", linetype=6, size=1)
+funnel_plot = funnel_plot + scale_x_continuous(name="Population (100,000's)", breaks=100000*(0:14), labels=0:14, limits=c(0,max(d)))
+funnel_plot = funnel_plot + scale_y_continuous(name="Annual bowel cancer mortality rate per 100,000", breaks=5*(0:8)/100000, labels=5*(0:8), limits=c(0,max.props))
+
+glasgow <- subset(bowel.data, District == "Glasgow City")  # identify Glasgow City in data frame
+
+#funnel_plot = funnel_plot + geom_text(data=glasgow, label="Glasgow City", vjust=1)
+
+funnel_plot = funnel_plot + annotate("text", x=glasgow$d,y=glasgow$n/glasgow$d,label="Glasgow City",hjust=0, vjust=0.5)
+
+funnel_plot
+```
+

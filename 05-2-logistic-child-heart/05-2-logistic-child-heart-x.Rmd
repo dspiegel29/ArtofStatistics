@@ -1,0 +1,38 @@
+---
+  title: "Art of Statistics: Figure 5.2 (page 137).  Logistic regression result"
+  #output: md_document
+  output: html_document
+---
+
+Data from 1991-1995 are contained in [02-5-child-heart-surgery-1991-x.csv](02-5-child-heart-surgery-1991-x.csv), and taken from [D.J. Spiegelhalter et al., Commissioned Analysis of Surgical Performance Using Routine Data: Lessons from the Bristol Inquiry](https://onlinelibrary.wiley.com/doi/10.1111/1467-985X.02021/pdf).
+
+```{r}
+ 
+library(ggplot2)
+
+child.1991 <- read.csv("02-5-child-heart-surgery-1991-x.csv") # read data into dataframe 
+
+attach(child.1991)
+# leave first row (Bristol) out of the fit
+fit=glm(Survivors/Operations ~ Operations, weight=Operations, family="binomial",data=child.1991[-1,])
+summary(fit)
+
+predictions=100*predict(fit, data.frame(Operations=0:700), type="response")  # predictions for extreme cases
+
+pred.frame = data.frame(Extremes=0:700,predictions ) # data frame for predictions
+
+p <- ggplot() 
+p <- p + geom_point(child.1991, mapping=aes(x=Operations, y=100*Survivors/Operations, col=Hospital), size=3.5) # defines scatter-type plot, plot axis data fields and colour legend data field
+p <- p + expand_limits(x = c(0,700),y=c(70,100))
+p <- p +  labs(x="Number of operations", y = "% 30-day survival", title="(a) Survival in under-1s, 1991-1995") # Adds axes and title 
+p <- p + geom_line(dat=pred.frame, aes(x=Extremes,y=predictions), size=1) # add previously fitted logstic regression line  
+ 
+p
+```
+
+Figure 5.2 Fitted logistic regression model for child heart surgery data for under-1s in UK hospitals between 1991 and 1995. Hospitals treating more patients have better survival. The line is part of a curve that will never reach 100%, and is fitted ignoring the outlying data-point representing Bristol. 
+
+
+
+
+ 
