@@ -3,7 +3,7 @@
   #output: md_document
   output: html_document
 ---
-Data are from [Office for National Statistcs Homicide data, 2017](https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/compendium/focusonviolentcrimeandsexualoffences/yearendingmarch2016/homicide#statistical-interpretation-of-trends-in-homicides).
+Data are from [Office for National Statistcs Homicide data, 2017](https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/compendium/focusonviolentcrimeandsexualoffences/yearendingmarch2016/homicide#statistical-interpretation-of-trends-in-homicides).  [Note the total for the last three years, from April 2013 to March 2016,is 1,560, whereas this total is reported as 1,545 in the preceding analysis for Figure 8.5 on page 225. This accords with the data provided by ONS]
 
 ***************************************************************************
 

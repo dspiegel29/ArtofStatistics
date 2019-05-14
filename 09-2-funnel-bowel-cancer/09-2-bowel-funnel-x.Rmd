@@ -1,5 +1,5 @@
 ---
-  title: "Art of Statistics: Figure 9-2 (pafe 235) Funnel plot of bowel cancer rates"
+  title: "Art of Statistics: Figure 9-2 (page 235) Funnel plot of bowel cancer rates"
   #output: md_document
   output: html_document
 ---
@@ -9,7 +9,7 @@
 
 The date are discussed in a blog by Paul Barden on the [Understanding Uncertainty site](https://understandinguncertainty.org/three-fold-variation-uk-bowel-cancer-death-rates)
 
-and on his [own blog](https://pb204.blogspot.com/2011/09/im-grateful-to-david-spiegelhalter-of.html)
+and on his [own blog](https://pb204.blogspot.com/2011/09/im-grateful-to-david-spiegelhalter-of.html). Note that data for Wales is not included, as it was reported for the whole of Wales rather than by region.
 ```{r}
 
 library(ggplot2)
