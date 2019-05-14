@@ -24,5 +24,9 @@ Suggestions for improvements to david@statslab.cam.ac.uk
 * page 86. Line -9. "2,190" should read "2,910"
 * page 212 Figure 8.3 – the label ‘Head’ on the first lower branch should be 'Tail'
 * page 232. Figure 9.1b is incorrect - the bars should have heights 0.32, 0.64, 0.04, as described in the footnote.  Figures 9.1e and 9.1f are incorrect, the peak should be centred at 0.2.  The correct version of Figure 9.1 can be found on the Github repository  
+* page 319 Table 11.1 shows a 'combined evidence' total of 6.5 million, but in the text on p.318 it states 6.7 million. (6.5 million uses the rounded numbers in the Table, 6.7 million uses unrounded numbers)
+* Page 342, start of the last paragraph,'Ioannadis' is misspelled (having spelt it correctly as 'Ioannidis'at the start of the previous paragraph ) 
 * page 375 Headings of Table 13.1.  'O' in 'Others' is printed as a zero rather than an 'O'
+* page 416 Note 7 ends with 'p.000', which should be 'p.92'
+
 
