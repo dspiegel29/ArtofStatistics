@@ -373,16 +373,41 @@ $(document).ready(function () {
 </div>
 
 
-<p>Data are contained in <a href="02-4-sexual-partners-counts-x.csv" class="uri">02-4-sexual-partners-counts-x.csv</a>, and comprise the distribnuton of the reported lifetime number of opposite-sex partners for men and women aged 35-44. The data are derived from the Natsal-3 survey reported in <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(13)62035-8/fulltext">C.H. Mercer et al., ‘Changes in Sexual Attitudes and Lifestyles in Britain through the Life Course and Over Time: Findings from the National Surveys of Sexual Attitudes and Lifestyles (Natsal)’, 2013</a>, and are kindly provided by Natsal. For a vivid examination of sex statistics, see <a href="https://www.amazon.co.uk/Numbers-Wellcome-Collection-David-Spiegelhalter/dp/1781253293">Sex by Numbers, 2015</a> .</p>
-<p>Table 2.2 (page 53) of summary statistics were taken from Tables 2 and 3 of Mercer et al (2013): the reported sample sizes of 806 men and 1215 women correspond to the total number surveyed.</p>
+<p>Data are contained in <a href="02-4-sexual-partners-counts-x.csv" class="uri">02-4-sexual-partners-counts-x.csv</a>, and comprise the distribution of the reported lifetime number of opposite-sex partners for men and women aged 35-44. The data are from the Natsal-3 survey reported in <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(13)62035-8/fulltext">C.H. Mercer et al., ‘Changes in Sexual Attitudes and Lifestyles in Britain through the Life Course and Over Time: Findings from the National Surveys of Sexual Attitudes and Lifestyles (Natsal)’, 2013</a>. These raw data, kindly provided by Natsal, correspond to a nominal total of 796 men and 1,193 women, rather than the 806 and 1,215 reported in Mercer et al (2013). The summary statistics do not match those in Table 2.2 (page 53), which come from Tables 2 and 3 of Mercer et al (2013), and are based on data that has been reweighted to allow for the stratified design of the survey.</p>
+<p>For a vivid examination of sex statistics, see <a href="https://www.amazon.co.uk/Numbers-Wellcome-Collection-David-Spiegelhalter/dp/1781253293">Sex by Numbers, 2015</a> .</p>
 <div id="figure-2.4-page-55-bar-chart" class="section level3">
 <h3>Figure 2.4 (page 55) Bar chart</h3>
-<p>The counts correspond to 796 men and 1193 women (not 1000 as stated on page 191) for whom detailed data were available.</p>
 <pre class="r"><code>library(ggplot2)
-partners &lt;-read.csv(&quot;02-4-sexual-partners-counts-x.csv&quot;, header=TRUE) # reads data into data frame
+partner.counts &lt;-read.csv(&quot;02-4-sexual-partners-counts-x.csv&quot;, header=TRUE) # reads data into data frame
 
+attach(partner.counts)
+Men.data=rep(NumPartners,MenCount)
+summary(Men.data)</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    0.00    4.00    8.00   16.98   20.00  501.00</code></pre>
+<pre class="r"><code>sd(Men.data)</code></pre>
+<pre><code>## [1] 37.80737</code></pre>
+<pre class="r"><code>range(Men.data)</code></pre>
+<pre><code>## [1]   0 501</code></pre>
+<pre class="r"><code>sum(MenCount)</code></pre>
+<pre><code>## [1] 796</code></pre>
+<pre class="r"><code>Women.data=rep(NumPartners,WomenCount)
+summary(Women.data)</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    0.00    2.00    5.00    8.23   10.00  550.00</code></pre>
+<pre class="r"><code>sd(Women.data)</code></pre>
+<pre><code>## [1] 17.95505</code></pre>
+<pre class="r"><code>range(Women.data)</code></pre>
+<pre><code>## [1]   0 550</code></pre>
+<pre class="r"><code>sum(WomenCount)</code></pre>
+<pre><code>## [1] 1193</code></pre>
+<pre class="r"><code># create data frame with Gender as factor
 
-p &lt;- ggplot(partners, aes(x=NumPartners)) # constructs initial plot object, p
+Ncats=length(NumPartners)
+
+partners = data.frame( NumPartners2=c(NumPartners,NumPartners), Percent=c(MenPercent,WomenPercent), Gender=c(rep(&quot;M&quot;,Ncats),rep(&quot;F&quot;,Ncats)) )
+
+p &lt;- ggplot(partners, aes(x=NumPartners2)) # constructs initial plot object, p
 p &lt;- p + geom_bar(aes(y=Percent,fill=Gender),stat = &quot;identity&quot;,position=&quot;dodge&quot;) # assigns bar-chart type with side by side (dodged) bars
 p &lt;- p + geom_text(aes(x = 20, y = 12, label = &quot;Women 35-44&quot;, color = &quot;Female&quot;, hjust=0)) # our custom legend
 p &lt;- p + geom_text(aes(x = 20, y = 11, label = &quot;Men 35-44&quot;, color = &quot;Male&quot;, hjust=0)) # our custom legend

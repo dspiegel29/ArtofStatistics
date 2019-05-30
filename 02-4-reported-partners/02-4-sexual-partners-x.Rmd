@@ -3,19 +3,40 @@
   #output: md_document
   output: html_document
 ---
-Data are contained in [02-4-sexual-partners-counts-x.csv](02-4-sexual-partners-counts-x.csv), and comprise the distribnuton of the reported lifetime number of opposite-sex partners for men and women aged 35-44. The data are derived from the Natsal-3 survey reported  in [C.H. Mercer et al., ‘Changes in Sexual Attitudes and Lifestyles in Britain through the Life Course and Over Time: Findings from the National Surveys of Sexual Attitudes and Lifestyles (Natsal)’, 2013](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(13)62035-8/fulltext), and are kindly provided by Natsal.  For a vivid examination of sex statistics, see [Sex by Numbers, 2015](https://www.amazon.co.uk/Numbers-Wellcome-Collection-David-Spiegelhalter/dp/1781253293) .
+Data are contained in [02-4-sexual-partners-counts-x.csv](02-4-sexual-partners-counts-x.csv), and comprise the distribution of the reported lifetime number of opposite-sex partners for men and women aged 35-44. The data are from the Natsal-3 survey reported  in [C.H. Mercer et al., ‘Changes in Sexual Attitudes and Lifestyles in Britain through the Life Course and Over Time: Findings from the National Surveys of Sexual Attitudes and Lifestyles (Natsal)’, 2013](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(13)62035-8/fulltext).  These raw data, kindly provided by Natsal, correspond to a nominal total of 796 men and 1,193 women, rather than the 806 and 1,215 reported in Mercer et al (2013).  The summary statistics do not match those in Table 2.2 (page 53), which come from Tables 2 and 3 of Mercer et al (2013), and are based on data that has been reweighted to allow for the stratified design of the survey.
 
-Table 2.2 (page 53) of summary statistics were taken from Tables 2 and 3 of Mercer et al (2013): the reported sample sizes of 806 men and 1215 women correspond to the total number surveyed.  
+
+For a vivid examination of sex statistics, see [Sex by Numbers, 2015](https://www.amazon.co.uk/Numbers-Wellcome-Collection-David-Spiegelhalter/dp/1781253293) .
+
+
 
 ### Figure 2.4 (page 55) Bar chart
-The counts correspond to 796 men and 1193 women (not 1000 as stated on page 191) for whom detailed data were available. 
+ 
 
 ```{r}
 library(ggplot2)
-partners <-read.csv("02-4-sexual-partners-counts-x.csv", header=TRUE) # reads data into data frame
+partner.counts <-read.csv("02-4-sexual-partners-counts-x.csv", header=TRUE) # reads data into data frame
 
+attach(partner.counts)
+Men.data=rep(NumPartners,MenCount)
+summary(Men.data)
+sd(Men.data)
+range(Men.data)
+sum(MenCount)
 
-p <- ggplot(partners, aes(x=NumPartners)) # constructs initial plot object, p
+Women.data=rep(NumPartners,WomenCount)
+summary(Women.data)
+sd(Women.data)
+range(Women.data)
+sum(WomenCount)
+
+# create data frame with Gender as factor
+
+Ncats=length(NumPartners)
+
+partners = data.frame( NumPartners2=c(NumPartners,NumPartners), Percent=c(MenPercent,WomenPercent), Gender=c(rep("M",Ncats),rep("F",Ncats)) )
+
+p <- ggplot(partners, aes(x=NumPartners2)) # constructs initial plot object, p
 p <- p + geom_bar(aes(y=Percent,fill=Gender),stat = "identity",position="dodge") # assigns bar-chart type with side by side (dodged) bars
 p <- p + geom_text(aes(x = 20, y = 12, label = "Women 35-44", color = "Female", hjust=0)) # our custom legend
 p <- p + geom_text(aes(x = 20, y = 11, label = "Men 35-44", color = "Male", hjust=0)) # our custom legend
