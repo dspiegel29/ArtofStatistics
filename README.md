@@ -22,6 +22,7 @@ Suggestions for improvements to david@statslab.cam.ac.uk
 # Errata
 
 * page 86. Line -9. "2,190" should read "2,910"
+* p110 The 'M' in STEM should be 'Mathematics' and not 'Medicine'
 * pages 191 to 200 - see below
 * page 212 Figure 8.3 – the label ‘Head’ on the first lower branch should be 'Tail'
 * page 222, line -3, '2014' should be '2013'
