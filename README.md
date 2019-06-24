@@ -21,13 +21,16 @@ Suggestions for improvements to david@statslab.cam.ac.uk
 
 # Errata
 
-* page 86. Line -9. "2,190" should read "2,910"
-* p110 The 'M' in STEM should be 'Mathematics' and not 'Medicine'
+* page 26 Figure 1.1  This is not strictly an error, but on reflection I think it would have been better to use dots instead of bars when the axis does not have a zero origin
+* page 86 line -9. "2,190" should read "2,910"
+* page 110 The 'M' in STEM should be 'Mathematics' and not 'Medicine'
+* page 156 line 9.  'large' should be 'smaller' 
 * pages 191 to 200 - see below
 * page 212 Figure 8.3 – the label ‘Head’ on the first lower branch should be 'Tail'
 * page 222, line -3, '2014' should be '2013'
 * page 225 legend to Figure 8.5, '2014' should be '2013'
-* page 232. Figure 9.1b is incorrect - the bars should have heights 0.32, 0.64, 0.04, as described in the footnote.  Figures 9.1e and 9.1f are incorrect, the peak should be centred at 0.2, and 9.1e has an apparent layer of probability smeared over the whole range.  The correct version of Figure 9.1 can be found on the Github repository  
+* page 232. Figure 9.1b is incorrect - the bars should have heights 0.32, 0.64, 0.04, as described in the footnote.  Figures 9.1e and 9.1f are incorrect, the peak should be centred at 0.2, and 9.1e has an apparent layer of probability smeared over the whole range.  The correct version of Figure 9.1 is shown below, and can be found on the Github repository
+![](09-1-left-hander-binomial.png)
 * page 235 Legend to Figure 9.2, line 2, after 'UK', add '(except Wales)'
 * page 254 In the legend to Figure 10.1 'solid' should be replaced by 'dashed'  
 * page 318 line -6, replace 6.7 by 6.5 (6.5 million uses the rounded numbers in the Table, 6.7 million uses unrounded numbers)
