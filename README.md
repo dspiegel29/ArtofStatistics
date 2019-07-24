@@ -26,6 +26,7 @@ Suggestions for improvements to david@statslab.cam.ac.uk
 * page 110 The 'M' in STEM should be 'Mathematics' and not 'Medicine'
 * page 156 line 9.  'large' should be 'smaller' 
 * pages 191 to 200 - see below
+* page 206, header says "Chapter 7", should be "Chapter 8"
 * page 212 Figure 8.3 – the label ‘Head’ on the first lower branch should be 'Tail'
 * page 222, line -3, '2014' should be '2013'
 * page 225 legend to Figure 8.5, '2014' should be '2013'
