@@ -34,7 +34,9 @@ Suggestions for improvements to david@statslab.cam.ac.uk
 ![](09-1-left-hander-binomial.png)
 * page 235 Legend to Figure 9.2, line 2, after 'UK', add '(except Wales)'
 * page 254 In the legend to Figure 10.1 'solid' should be replaced by 'dashed'  
+* page 306 para 3, line 4, replace ‘gender’ by ‘sex’
 * page 318 line -6, replace 6.7 by 6.5 (6.5 million uses the rounded numbers in the Table, 6.7 million uses unrounded numbers)
+* page 324 line 4,   ‘down’ should be ‘up’
 * Page 342, start of the last paragraph,'Ioannadis' is misspelled (having spelt it correctly as 'Ioannidis'at the start of the previous paragraph ) 
 * page 375 Headings of Table 13.1.  'O' in 'Others' is printed as a zero rather than an 'O'
 * page 416 Note 7 ends with 'p.000', which should be 'p.92'
