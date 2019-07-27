@@ -21,12 +21,12 @@ Suggestions for improvements to david@statslab.cam.ac.uk
 
 # Errata
 
-* page 26 Figure 1.1  This is not strictly an error, but on reflection I think it would have been better to use dots instead of bars when the axis does not have a zero origin
-* page 86 line -9. "2,190" should read "2,910"
+* page 26 Figure 1.1 At the end of the legend, add 'Rather than a bar-chart, it may be better to use dots for the data-points when the axis does not start at zero.'
+* page 86 line -9. '2,190' should read '2,910'
 * page 110 The 'M' in STEM should be 'Mathematics' and not 'Medicine'
 * page 156 line 9.  'large' should be 'smaller' 
 * pages 191 to 200 - see below
-* page 206, header says "Chapter 7", should be "Chapter 8"
+* page 206, header says 'Chapter 7', should be 'Chapter 8'
 * page 212 Figure 8.3 – the label ‘Head’ on the first lower branch should be 'Tail'
 * page 222, line -3, '2014' should be '2013'
 * page 225 legend to Figure 8.5, '2014' should be '2013'
@@ -35,7 +35,9 @@ Suggestions for improvements to david@statslab.cam.ac.uk
 * page 235 Legend to Figure 9.2, line 2, after 'UK', add '(except Wales)'
 * page 254 In the legend to Figure 10.1 'solid' should be replaced by 'dashed'  
 * page 306 para 3, line 4, replace ‘gender’ by ‘sex’
-* page 318 line -6, replace 6.7 by 6.5 (6.5 million uses the rounded numbers in the Table, 6.7 million uses unrounded numbers)
+* page 319 Table 1 last line, replace '6.5' by '6.7'
+* page 319 Table 1 legend, replace '6.5' by '6.7'
+* page 319 Table 1 legend, after 'individual' add '(unrounded)'
 * page 324 line 4,   ‘down’ should be ‘up’
 * Page 342, start of the last paragraph,'Ioannadis' is misspelled (having spelt it correctly as 'Ioannidis'at the start of the previous paragraph ) 
 * page 375 Headings of Table 13.1.  'O' in 'Others' is printed as a zero rather than an 'O'
