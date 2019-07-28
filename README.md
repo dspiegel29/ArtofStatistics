@@ -19,7 +19,7 @@ This repository contains data and R code for the Figures and Tables in Art of St
 
 Suggestions for improvements to david@statslab.cam.ac.uk
 
-# Errata
+# Errata and additions
 
 * page 26 Figure 1.1 At the end of the legend, add 'Rather than a bar-chart, it may be better to use dots for the data-points when the axis does not start at zero.'
 * page 86 line -9. '2,190' should read '2,910'
@@ -64,7 +64,9 @@ The bootstrap analysis in Chapter 7 contained some errors which have been correc
 * page 196 Legend to Figure 7.2: replace everything after “40” with  “30 partners occurs twice in the original sample. These data-points were sampled once in the first bootstrap sample, not at all in the second, and twice in the third.”
 * page 197 para 1, line 2, replace “18.8” by “10.5”
 * page 197 para 1, line 5, replace “14.5” by “8.4”
+* page 197 para 1, line 5, after “8.4”, add footnote '*'
 * page 197 para 1, line -1, replace “14.5, 26.5 and 22.5” by “8.4, 9.7 and 9.8”
+* page 197 add footnote '* Think of a bag of 50 balls, each labelled as one data-point from our sample of 50; for example, two would be labelled “25”, four would be labelled “30”, and so on. We pick one ball at random from the bag, record its value, and then replace it, restoring the number of balls in the bag to 50. We repeat this process of picking, recording and replacing a total of 50 times, producing a distribution of data-points such as “Boot 1”.'
 * page 198 replace Figure 7.3 by the corrected version on the Github repository  
 * page 198 Legend to Figure 7.3: replace  “796” should be “760”
 * page 199 para 2, line 3, after “contains” add “the central”
