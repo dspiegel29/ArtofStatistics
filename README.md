@@ -22,9 +22,7 @@ The [repository](https://github.com/dspiegel29/ArtofStatistics) contains data an
 
 Suggestions for improvements to david@statslab.cam.ac.uk
 
-Direct links to output:
 
-* [00-2-shipman-times](tree/master/00-2-shipman-times)
 
 
 # Errata and additions
