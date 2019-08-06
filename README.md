@@ -1,15 +1,18 @@
 ## ArtofStatistics
-Code for 'The Art of Statistics'
+Code for 'The Art of Statistics' by David Spiegelhalter
 
-by David Spiegelhalter
+UK cover: ![](art-cover.png) US cover:   ![](US-cover.png)   
 
-![](art-cover.png)
+Here is the book's [UK Amazon page](https://www.amazon.co.uk/Art-Statistics-Learning-Pelican-Books/dp/0241398630)
+and [US Amazon page](https://www.amazon.co.uk/Art-Statistics-Learning-Pelican-Books/dp/0241398630)
 
-Here is its [Amazon page](https://www.amazon.co.uk/Art-Statistics-Learning-Pelican-Books/dp/0241398630)
+The UK and US versions are identical in content.  Errata and additions are listed below for both versions.
 
-This repository contains data and R code for the Figures and Tables in Art of Statistics.  They should all work in RStudio.
+# Code repository
 
-* It is not yet complete, and will change and improve, including a blogdown web page. 
+The [repository](https://github.com/dspiegel29/ArtofStatistics) contains data and R code for the Figures and Tables in Art of Statistics.  They should all work in RStudio.
+
+* It is not yet complete, and will change and improve. 
 
 * The graphics were originally mainly produced in basic R, but (with much appreciated assistance) these have been mainly revised into ggplot2 - sometimes both versions are provided for comparison.  However I do not pretend to have any particular skill in using R or ggplot, and no doubt many improvements could be made.
 
@@ -18,6 +21,11 @@ This repository contains data and R code for the Figures and Tables in Art of St
 * While the individual files can be downloaded, it is probably easiest to download a zipped repository using the green download button.
 
 Suggestions for improvements to david@statslab.cam.ac.uk
+
+Direct links to output:
+
+* [00-2-shipman-times](./tree/master/00-2-shipman-times)
+
 
 # Errata and additions
 
