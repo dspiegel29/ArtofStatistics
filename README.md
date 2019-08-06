@@ -4,7 +4,7 @@ Code for 'The Art of Statistics' by David Spiegelhalter
 UK cover: ![](art-cover.png) US cover:   ![](US-cover.png)   
 
 Here is the book's [UK Amazon page](https://www.amazon.co.uk/Art-Statistics-Learning-Pelican-Books/dp/0241398630)
-and [US Amazon page](https://www.amazon.co.uk/Art-Statistics-Learning-Pelican-Books/dp/0241398630)
+and [US Amazon page](https://www.amazon.com/Art-Statistics-How-Learn-Data/dp/1541618513/ref=sr_1_2?keywords=spiegelhalter&qid=1564306871&s=gateway&sr=8-2)
 
 The UK and US versions are identical in content.  Errata and additions are listed below for both versions.
 
