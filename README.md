@@ -24,7 +24,7 @@ Suggestions for improvements to david@statslab.cam.ac.uk
 
 Direct links to output:
 
-* [00-2-shipman-times](./tree/master/00-2-shipman-times)
+* [00-2-shipman-times](tree/master/00-2-shipman-times)
 
 
 # Errata and additions
