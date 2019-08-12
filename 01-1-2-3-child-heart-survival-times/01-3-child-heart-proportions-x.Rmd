@@ -16,6 +16,18 @@ library(ggplot2)
 df <- read.csv("01-1-child-heart-survival-x.csv", header=TRUE) # reads csv into dataframe, df
 df$Percentage = 100*df$Operations/sum(df$Operations)
 df$Pos= rank(df$Percentage)
+```
+First in R base graphics
+
+```{r}
+par(mar=c(5,15,4,2))
+barplot(df$Percentage,names.arg=df$Hospital,horiz=T, xpd=F,las=1, xlab="Percentage of all operations in 2012-15 \nthat are carried out in each hospital")
+
+```
+
+Now in ggplot2
+
+```{r}
 bp <- ggplot(df, aes(x=reorder(Hospital,-Pos), y=Percentage, fill=Hospital)) #sets initial plot object from the dataframe for Hospitals, reordered by Percentage (descending) as the y-values, colour-filled by Hospital
 bp <- bp + geom_bar(stat = "identity") + labs(x="Hospital") # makes the plot a bar-chart
 bp <- bp + coord_flip() # makes it an horizontal bar chart

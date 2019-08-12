@@ -5,6 +5,8 @@
 ---
 
 ***************************************************************************
+
+First in R base graphics
 ```{r}
 #9-1
 library(magrittr)
@@ -14,7 +16,27 @@ library(gridExtra)
 
 n<-c(1,2,5,10,100,1000)
 pleft=0.2
+scale<-1.0
+lets<-c("(a)","(b)","(c)","(d)","(e)","(f)")
+mains<-paste(lets, " size ",n)
+xlabs = c("","","","Proportion left-handers","Proportion left-handers","Proportion left-handers")
+ylabs = c("Probability","","","Probability","","","")
 
+par(mfrow=c(2,3))
+scale=0.9
+for(i in 1:6){
+ x<-seq(0,n[i])
+y<-dbinom(x,n[i],pleft)
+barplot(y,space=1, names.arg=x/n[i], xlab=xlabs[i],ylab=ylabs[i],main=mains[i])
+axis(2,cex=scale)
+}
+
+```
+
+_Figure 9.1  The probability distribution of the observed proportion of left-handers in random samples of 1, 2, 5, 10, 100 and 1,000 people, where the true underlying proportion of left-handers in the population is 0.2. The probability of getting at least 30% left-handers in the sample is found by adding all the probability in the bars to the right of 0.3._
+
+Now in ggplot
+```{r}
 P <- list() # prepare list for plots
 for(i in 1:6) # 6 runs with parameter i
   
@@ -46,12 +68,21 @@ for(i in 1:6) # 6 runs with parameter i
   
 })
 
-
 g <- ggarrange(P[[1]],P[[2]],P[[3]],P[[4]],P[[5]],P[[6]], ncol=2 , nrow=4,labels=c("(a) Size 1", "(b) Size 2", "(c) Size 5", "(d) Size 10", "(e) Size 100", "(f) Size 1000"), font.label = list(size = 10, color = "black"), hjust = c(-3.2,-3.2,-3.2,-2.95,-2.6,-2.6), vjust = 2) # display the plots, NOTE that [[]]'s are required to access the list objects as ggplots
+
+# include to produce ps version of graph
+#setEPS()
+#postscript("09-1-left-hander-binomial.eps")
+
 g # displays the ggarranged ggplots
+
+# include to produce ps version of graph
+#dev.off()
+
+
 ```
 
-Figure 9.1  The probability distribution of the observed proportion of left-handers in random samples of 1, 2, 5, 10, 100 and 1,000 people, where the true underlying proportion of left-handers in the population is 0.2. The probability of getting at least 30% left-handers in the sample is found by adding all the probability in the bars to the right of 0.3.
+
 
 ### Probabilities of getting at least 30%
 

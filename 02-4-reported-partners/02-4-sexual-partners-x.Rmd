@@ -49,4 +49,4 @@ p # draw the plot
 
 ```
 
-Figure 2.4 Data provided by Natsal-3 based on interviews between 2010 and 2012. The series have been truncated at 50 for reasons of space - the totals go up to 500 for both men and women. Note the clear use of round numbers for ten or more partners, and the tendency for men to report more partners than women.
+_Figure 2.4 Data provided by Natsal-3 based on interviews between 2010 and 2012. The series have been truncated at 50 for reasons of space - the totals go up to 500 for both men and women. Note the clear use of round numbers for ten or more partners, and the tendency for men to report more partners than women._

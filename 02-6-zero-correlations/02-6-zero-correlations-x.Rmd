@@ -26,4 +26,4 @@ p
 
 ```
 
-Figure 2.6 Two sets of (fictitious) data-points for which the Pearson correlation coefficients are both 0. This clearly does not mean there is no relationship between the two variables being plotted.
+_Figure 2.6 Two sets of (fictitious) data-points for which the Pearson correlation coefficients are both 0. This clearly does not mean there is no relationship between the two variables being plotted._
