@@ -1,4 +1,4 @@
-# The Art of Statistics
+# ArtofStatistics
 Code for 'The Art of Statistics' by David Spiegelhalter
 
 UK cover: ![](art-cover.png) US cover:   ![](US-cover.png)   
@@ -24,7 +24,7 @@ Suggestions for improvements to david@statslab.cam.ac.uk
 
 ### Markdown output for individual Figures
 
-If you want to see these, make sure you are viewing this on [this page] (https://dspiegel29.github.io/ArtofStatistics/)
+If you want to see these, make sure you are viewing this on [this page](https://dspiegel29.github.io/ArtofStatistics/)
 
 * [00-1-age-and-year-of-deathofharold-shipmans-victims](00-1-age-and-year-of-deathofharold-shipmans-victims/00-1-age-year-shipman_victims-x.html)
 * [00-2-shipman-times](00-2-shipman-times/00-2-shipman-times-x.html)
