@@ -1,5 +1,4 @@
-# ArtofStatistics
-Code for 'The Art of Statistics' by David Spiegelhalter
+# The Art of Statistics: Code and Errata
 
 UK cover: ![](art-cover.png) US cover:   ![](US-cover.png)   
 
