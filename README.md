@@ -1,4 +1,4 @@
-# The Art of Statistics: Code and Errata
+# The Art of Statistics: Code, Data and Errata
 
 UK cover: ![](art-cover.png) US cover:   ![](US-cover.png)   
 
