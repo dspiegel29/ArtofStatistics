@@ -7,6 +7,8 @@ and [US Amazon page](https://www.amazon.com/Art-Statistics-How-Learn-Data/dp/154
 
 The UK and US versions are identical in content.  Errata and additions are listed below for both versions.
 
+This file is produced by R Markdown, and there is also a [web-page](https://dspiegel29.github.io/ArtofStatistics/)  produced by Github.  
+
 # Code repository
 
 The [repository](https://github.com/dspiegel29/ArtofStatistics) contains data and R code for the Figures and Tables in Art of Statistics.  They should all work in RStudio.
