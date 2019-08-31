@@ -57,6 +57,7 @@ Suggestions for improvements to david@statslab.cam.ac.uk
 # Errata and additions
 
 * page 26 Figure 1.1 At the end of the legend, add 'Rather than a bar-chart, it may be better to use dots for the data-points when the axis does not start at zero.'
+* page 49 Footnote.  '31,337' was probably a deliberate choice by an ageing geek, as it was an old expression for ['eleet / elite'](https://www.urbandictionary.com/define.php?term=31337).
 * page 86 line -9. '2,190' should read '2,910'
 * page 110 The 'M' in STEM should be 'Mathematics' and not 'Medicine'
 * page 156 line 9.  'large' should be 'smaller' 
