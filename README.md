@@ -1,4 +1,4 @@
-# The Art of Statistics: Code, Data and Errata
+# The Art of Statistics: Code, Data, Errata and Additions
 
 UK cover: ![](art-cover.png) US cover:   ![](US-cover.png)   
 
@@ -58,9 +58,11 @@ Suggestions for improvements to david@statslab.cam.ac.uk
 
 * page 26 Figure 1.1 At the end of the legend, add 'Rather than a bar-chart, it may be better to use dots for the data-points when the axis does not start at zero.'
 * page 49 Footnote.  '31,337' was probably a deliberate choice by an ageing geek, as it was an old expression for ['eleet / elite'](https://www.urbandictionary.com/define.php?term=31337).
+* page 71 line 2,  add 'before having their first child'  
 * page 86 line -9. '2,190' should read '2,910'
 * page 110 The 'M' in STEM should be 'Mathematics' and not 'Medicine'
 * page 156 line 9.  'large' should be 'smaller' 
+* page 159, 161 The question on page 161 should be before the last two lines on page 159.
 * pages 191 to 200 - see below
 * page 206, header says 'Chapter 7', should be 'Chapter 8'
 * page 212 Figure 8.3 – the label ‘Head’ on the first lower branch should be 'Tail'
@@ -69,7 +71,8 @@ Suggestions for improvements to david@statslab.cam.ac.uk
 * page 232. Figure 9.1b is incorrect - the bars should have heights 0.32, 0.64, 0.04, as described in the footnote.  Figures 9.1e and 9.1f are incorrect, the peak should be centred at 0.2, and 9.1e has an apparent layer of probability smeared over the whole range.  The correct version of Figure 9.1 is shown below, and can be found on the Github repository
 ![](09-1-left-hander-binomial.png)
 * page 235 Legend to Figure 9.2, line 2, after 'UK', add '(except Wales)'
-* page 254 In the legend to Figure 10.1 'solid' should be replaced by 'dashed'  
+* page 254 In the legend to Figure 10.1 'solid' should be replaced by 'dashed'
+* page 286 lines -7,-6. alpha and beta should not be italicised.
 * page 306 para 3, line 4, replace ‘gender’ by ‘sex’
 * page 319 Table 1 last line, replace '6.5' by '6.7'
 * page 319 Table 1 legend, replace '6.5' by '6.7'
