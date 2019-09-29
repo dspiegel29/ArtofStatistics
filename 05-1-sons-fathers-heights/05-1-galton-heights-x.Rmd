@@ -4,7 +4,7 @@
   output: html_document
 ---
 
-Although Data from 1991-1995 are contained in [05-1-galton-x.csv](05-1-galton-x.csv),
+ Data from 1991-1995 are contained in [05-1-galton-x.csv](05-1-galton-x.csv),
 Although the book says the data is from [HistData: Data Sets from the History of Statistics and Data Visualization, 2018](https://cran.r-project.org/web/packages/HistData/index.html), I have actually used this version of  [Galton's Height Data](http://www.randomservices.org/random/data/Galton.html)
 
 ```{r}
@@ -55,21 +55,33 @@ sd(Daughter)
 
 ```{r}
 
-library(ggplot2)
 # Heights of fathers of sons
 FatherS = Father[Gender=="M"]
 
 fit <- lm(Son ~ FatherS) # linear regression data in fit
 Predicted <- predict(fit)   # Get the predicted values
-
+summary(fit)
 
 FatherS.j <- jitter(FatherS, factor=5) 
 Son.j <- jitter(Son, factor=5)
 
+xlims=ylims=c(55,80)
+par(mfrow=c(1,1), mar=c(4,4,2,0), pty="s")  # square plot
+
+plot(FatherS.j, Son.j, xlim=xlims,ylim=ylims,cex=0.7,
+     xlab="father's height (inches)",ylab="son's height (inches)" , col="gray68")
+lines(c(xlims[1],xlims[2]),c(xlims[1],xlims[2]),lty=2 )
+lines(Predicted~FatherS,lwd=2)
+
+```
+
+### Now in ggplot
+
+```{r}
+library(ggplot2)
 # create new data frame with exact and jittered, and predcted values
 
 Males = cbind.data.frame(FatherS,FatherS.j,Son,Son.j,Predicted)
-
 
 p <- ggplot(Males, aes(x=FatherS, y=Son)) # initial plot object
 p <- p + geom_point(x=FatherS.j,y=Son.j,shape= 1) # defines scatter type plot

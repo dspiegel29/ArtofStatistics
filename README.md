@@ -57,7 +57,8 @@ Suggestions for improvements to david@statslab.cam.ac.uk
 # Errata and additions
 
 * page 26 Figure 1.1 At the end of the legend, add 'Rather than a bar-chart, it may be better to use dots for the data-points when the axis does not start at zero.'
-* page 49 Footnote.  '31,337' was probably a deliberate choice by an ageing geek, as it was an old expression for ['eleet / elite'](https://www.urbandictionary.com/define.php?term=31337).
+* page 49 Footnote.  '31,337' was probably a deliberate choice by an ageing geek, as it was an old expression for ['eleet / elite'](https://www.urbandictionary.com/define.php?term=31337)
+* page 59 Legend for Figure 2.6, replace 'Alberto Cairo's' by 'the' 
 * page 71 line 2,  add 'before having their first child'  
 * page 86 line -9. '2,190' should read '2,910'
 * page 110 The 'M' in STEM should be 'Mathematics' and not 'Medicine'
@@ -80,6 +81,8 @@ Suggestions for improvements to david@statslab.cam.ac.uk
 * page 324 line 4,   ‘down’ should be ‘up’
 * Page 342, start of the last paragraph,'Ioannadis' is misspelled (having spelt it correctly as 'Ioannidis'at the start of the previous paragraph ) 
 * page 375 Headings of Table 13.1.  'O' in 'Others' is printed as a zero rather than an 'O'
+* page 409 Footnote 4, insert at start ' Data are from the 'Datasaurus Dozen', 
+https://www.autodeskresearch.com/publications/samestats, which includes '
 * page 416 Note 7 ends with 'p.000', which should be 'p.92'
 
 The bootstrap analysis in Chapter 7 contained some errors which have been corrected in the version on Github, where the analysis is clarified by using only data on men reporting less than 50 partners. Corresponding edits to the text are shown below.

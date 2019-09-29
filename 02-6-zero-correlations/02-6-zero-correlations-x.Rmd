@@ -3,7 +3,8 @@
   #output: md_document
   output: html_document
 ---
-Data are from  Alberto Cairo's wonderful [Datasaurus dozen](http://www.thefunctionalart.com/2016/08/download-datasaurus-never-trust-summary.html).
+Data are from the wonderful [Datasaurus dozen](
+https://www.autodeskresearch.com/publications/samestats), available from the [Cran R package](https://cran.r-project.org/web/packages/datasauRus/vignettes/Datasaurus.html).  They use Alberto Cairo's  [Datasaurus data](http://www.thefunctionalart.com/2016/08/download-datasaurus-never-trust-summary.html).
 ```{r}
 library(magrittr)
 library(ggplot2)
