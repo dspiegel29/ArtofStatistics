@@ -92,7 +92,7 @@ The bootstrap analysis in Chapter 7 contained some errors which have been correc
 * page 192 para 2, line 5. “of their responses” should be “for the 760 men who reported up to 50 partners.”
 * page 192 para 2, line 6. “796” should be “760”
 * page 192 para 2, line -4. “high” should be “low”
-* page 192 para 2, line -4. “21.1” should be “8.4”
+* page 192 para 2, line -4. “21.1” should be “8.3”
 * page 192 para 2, line -1. “796” should be “760”
 * page 193 replace Figure 7.1 by the corrected version on the Github repository  
 * page 193 Legend to Figure 7.1: replace  “796” should be “760”
@@ -103,12 +103,12 @@ The bootstrap analysis in Chapter 7 contained some errors which have been correc
 * page 195 line 3, replace “15” by “11.4”
 * page 195 para 2, line 5. “796” should be “760”
 * page 196 replace Figure 7.2 by the corrected version on the Github repository  
-* page 196 Legend to Figure 7.2: replace everything after “40” with  “30 partners occurs twice in the original sample. These data-points were sampled once in the first bootstrap sample, not at all in the second, and twice in the third.”
+* page 196 Legend to Figure 7.2: replace everything after “For example,” with  “25 partners occurs once in the original data. This data-point was not sampled in the first or second bootstrap sample, but was sampled twice in the third.”
 * page 197 para 1, line 2, replace “18.8” by “10.5”
 * page 197 para 1, line 5, replace “14.5” by “8.4”
 * page 197 para 1, line 5, after “8.4”, add footnote '*'
 * page 197 para 1, line -1, replace “14.5, 26.5 and 22.5” by “8.4, 9.7 and 9.8”
-* page 197 add footnote '* Think of a bag of 50 balls, each labelled as one data-point from our sample of 50; for example, two would be labelled “25”, four would be labelled “30”, and so on. We pick one ball at random from the bag, record its value, and then replace it, restoring the number of balls in the bag to 50. We repeat this process of picking, recording and replacing a total of 50 times, producing a distribution of data-points such as “Boot 1”.'
+* page 197 add footnote '* Think of a bag of 50 balls, each labelled as one data-point from our sample of 50; for example, one would be labelled ‘25’, two would be labelled ‘30’, and so on. We pick one ball at random from the bag, record its value, and then replace it, restoring the number of balls in the bag to 50. We repeat this process of picking, recording and replacing a total of 50 times, producing a distribution of data-points such as “Boot 1”.'
 * page 198 replace Figure 7.3 by the corrected version on the Github repository  
 * page 198 Legend to Figure 7.3: replace  “796” should be “760”
 * page 199 para 2, line 3, after “contains” add “the central”
