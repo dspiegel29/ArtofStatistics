@@ -1,15 +1,15 @@
 # The Art of Statistics: Code, Data, Errata and Additions
 
-UK cover: ![](art-cover.png) US cover:   ![](US-cover.png)   
+UK hardback: ![](art-cover.png)  UK paperback: ![](paperback-cover.png)  US hardback:   ![](US-cover.png)   
 
 Here is the book's [UK Amazon page](https://www.amazon.co.uk/Art-Statistics-Learning-Pelican-Books/dp/0241398630)
 and [US Amazon page](https://www.amazon.com/Art-Statistics-How-Learn-Data/dp/1541618513/ref=sr_1_2?keywords=spiegelhalter&qid=1564306871&s=gateway&sr=8-2)
 
-The UK and US versions are identical in content.  Errata and additions are listed below for both versions.
+The UK and US hardback versions are identical in content.  Errata and additions are listed below for all versions.
 
 This file is produced by R Markdown, and there is also a [web-page](https://dspiegel29.github.io/ArtofStatistics/)  produced by Github.  
 
-# Code repository
+## Code repository
 
 The [repository](https://github.com/dspiegel29/ArtofStatistics) contains data and R code for the Figures and Tables in Art of Statistics.  They should all work in RStudio.
 
@@ -52,9 +52,23 @@ Suggestions for improvements to david@statslab.cam.ac.uk
 
 
 
+## Errata and additions - Paperback  
 
+Many apologies that some errors are still there (sob).
 
-# Errata and additions
+* page 286 line 6. Add '1 - ' in front of $\beta$
+* page 286 line -7. Add '1 - ' in front of $\beta$
+* page 396 Pearson Correlation Coefficient.  The formula is missing a square root sign in the denominator, and should read
+$$r = \frac{  \sum_{i=1}^n (x_i - \overline{x})(y_i - \overline{y}) } { \sqrt{\sum_{i=1}^n (x_i - \overline{x})^2  \sum_{i=1}^n (y_i - \overline{y})^2 }}.$$
+
+* page 396 Pearson Correlation Coefficient. Add $\frac{1}{n}$ before $\sum_{i=1}^n u_i v_i$
+
+* page 396 Pearson Correlation Coefficient. 
+Add after 'Z-scores' '(this assumes the standard deviations have been calculated with $n$ in the denominator: if $n-1$ has been used, the formula is $\frac{1}{n-1}\sum_{i=1}^n u_i v_i$ )'
+
+## Errata and additions - Hardbacks 
+
+##### (these should now all be corrected in the paperback)
 
 * page 26 Figure 1.1 At the end of the legend, add 'Rather than a bar-chart, it may be better to use dots for the data-points when the axis does not start at zero.'
 * page 49 Footnote.  '31,337' was probably a deliberate choice by an ageing geek, as it was an old expression for ['eleet / elite'](https://www.urbandictionary.com/define.php?term=31337)
