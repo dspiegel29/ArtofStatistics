@@ -83,30 +83,25 @@ Many apologies that errors are still there (sob).
  - page 265	line 3, 	replace "null distribution"  by "distribution of the observed difference, were the null hypothesis true"
  - page 272	legend to Table 10.3, line 2	replace '2014' by '2013'
   - page 286 line 6. Add ‘1 -’ in front of
-    ![\\beta](https://latex.codecogs.com/png.latex?%5Cbeta "\\beta")
+![\beta](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbeta)
  - page 286 line -7. Add ‘1 -’ in front of
-    ![\\beta](https://latex.codecogs.com/png.latex?%5Cbeta "\\beta")
- - page 322	lines -6, -8, -11	Replace "royal" by "straight" in three places
+![\beta](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbeta)
+- page 322	lines -6, -8, -11	Replace "royal" by "straight" in three places
  - page 346	line -11	before "two groups", add "the changes in" 
   - page 396 Pearson Correlation Coefficient. The formula is missing a
     square root sign in the denominator, and should read  
-    ![r = \\frac{ \\sum\_{i=1}^n (x\_i - \\overline{x})(y\_i -
-    \\overline{y}) } { \\sqrt{\\sum\_{i=1}^n (x\_i -
-    \\overline{x})<sup>2 \\sum\_{i=1}</sup>n (y\_i - \\overline{y})^2
-    }}.](https://latex.codecogs.com/png.latex?r%20%3D%20%5Cfrac%7B%20%20%5Csum_%7Bi%3D1%7D%5En%20%28x_i%20-%20%5Coverline%7Bx%7D%29%28y_i%20-%20%5Coverline%7By%7D%29%20%7D%20%7B%20%5Csqrt%7B%5Csum_%7Bi%3D1%7D%5En%20%28x_i%20-%20%5Coverline%7Bx%7D%29%5E2%20%20%5Csum_%7Bi%3D1%7D%5En%20%28y_i%20-%20%5Coverline%7By%7D%29%5E2%20%7D%7D.%20%22r%20=%20\\frac%7B%20\\sum_%7Bi=1%7D%5En%20\(x_i%20-%20\\overline%7Bx%7D\)\(y_i%20-%20\\overline%7By%7D\)%20%7D%20%7B%20\\sqrt%7B\\sum_%7Bi=1%7D%5En%20\(x_i%20-%20\\overline%7Bx%7D\)%5E2%20\\sum_%7Bi=1%7D%5En%20\(y_i%20-%20\\overline%7By%7D\)%5E2%20%7D%7D.%22)
+    ![r = \frac{ \sum_{i=1}^n (x_i - \overline{x})(y_i - \overline{y}) } { \sqrt{\sum_{i=1}^n (x_i - \overline{x})^2 \sum_{i=1}^n (y_i - \overline{y})^2 }}.](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+r+%3D+%5Cfrac%7B+%5Csum_%7Bi%3D1%7D%5En+%28x_i+-+%5Coverline%7Bx%7D%29%28y_i+-+%5Coverline%7By%7D%29+%7D+%7B+%5Csqrt%7B%5Csum_%7Bi%3D1%7D%5En+%28x_i+-+%5Coverline%7Bx%7D%29%5E2+%5Csum_%7Bi%3D1%7D%5En+%28y_i+-+%5Coverline%7By%7D%29%5E2+%7D%7D.)
 
   - page 396 Pearson Correlation Coefficient. Add
-    ![\\frac{1}{n}](https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7Bn%7D%20%22\\frac%7B1%7D%7Bn%7D%22)
-    before ![\\sum\_{i=1}^n u\_i
-    v\_i](https://latex.codecogs.com/png.latex?%5Csum_%7Bi%3D1%7D%5En%20u_i%20v_i%20%22\\sum_%7Bi=1%7D%5En%20u_i%20v_i%22)
+    ![\frac{1}{n}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cfrac%7B1%7D%7Bn%7D)
+    before ![\sum_{i=1}^n u_i v_i](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Csum_%7Bi%3D1%7D%5En+u_i+v_i)
 
   - page 396 Pearson Correlation Coefficient. Add after ‘Z-scores’
     ‘(this assumes the standard deviations have been calculated with
-    ![n](https://latex.codecogs.com/png.latex?n "n") in the denominator:
-    if ![n-1](https://latex.codecogs.com/png.latex?n-1 "n-1") has been
-    used, the formula is ![\\frac{1}{n-1}\\sum\_{i=1}^n u\_i
-    v\_i](https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7Bn-1%7D%5Csum_%7Bi%3D1%7D%5En%20u_i%20v_i%20%22\\frac%7B1%7D%7Bn-1%7D\\sum_%7Bi=1%7D%5En%20u_i%20v_i%22)
-    )’
+    ![n](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+n)  in the denominator:
+    if ![n-1](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+n-1) has been
+    used, the formula is ![\frac{1}{n-1}\sum_{i=1}^n u_i v_i](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cfrac%7B1%7D%7Bn-1%7D%5Csum_%7Bi%3D1%7D%5En+u_i+v_i) 
+    
 
  - page 409	note 5 	replace "https://esa.un.org/unpd/wpp/Download/Standard/Population/" by "https://population.un.org/wpp/Download/Standard/Population/"
  - page 413	note 4	replace with "https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf"
