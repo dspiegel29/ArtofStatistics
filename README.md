@@ -88,6 +88,7 @@ Many apologies that errors are still there (sob).
 ![\beta](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbeta)
 - page 322	lines -6, -8, -11	Replace "royal" by "straight" in three places
  - page 346	line -11	before "two groups", add "the changes in" 
+ - page 385   Glossary entry for chi-squared tests. Add at end 'For small counts a 'continuity correction' can be applied, and this is used for the data in Table 10.2'
   - page 396 Pearson Correlation Coefficient. The formula is missing a
     square root sign in the denominator, and should read  
     ![r = \frac{ \sum_{i=1}^n (x_i - \overline{x})(y_i - \overline{y}) } { \sqrt{\sum_{i=1}^n (x_i - \overline{x})^2 \sum_{i=1}^n (y_i - \overline{y})^2 }}.](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+r+%3D+%5Cfrac%7B+%5Csum_%7Bi%3D1%7D%5En+%28x_i+-+%5Coverline%7Bx%7D%29%28y_i+-+%5Coverline%7By%7D%29+%7D+%7B+%5Csqrt%7B%5Csum_%7Bi%3D1%7D%5En+%28x_i+-+%5Coverline%7Bx%7D%29%5E2+%5Csum_%7Bi%3D1%7D%5En+%28y_i+-+%5Coverline%7By%7D%29%5E2+%7D%7D.)

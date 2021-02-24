@@ -16,8 +16,8 @@ library("ggplot2")
 library("reshape2")
 
 # set seed for reproducibility  - subsequent results are very sensitive to this seed!!
-# set.seed(12321)
-set.seed(22222)   
+set.seed(12321)
+# set.seed(22222)   
 
 ### Output Params
 
